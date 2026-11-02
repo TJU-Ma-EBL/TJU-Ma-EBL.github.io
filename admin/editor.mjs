@@ -644,24 +644,27 @@ document.querySelectorAll('[data-quick-add]').forEach(control => control.addEven
 
 let previewDialog = null;
 let previewFrame = null;
-let previewPages = null;
-const previewPageNames = {
-  'index.html': 'Home', 'publications.html': 'Publications', 'team.html': 'People', 'join.html': 'Join Us', 'contact.html': 'Contact'
-};
+let previewPage = null;
+const previewSections = [
+  ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact']
+];
 function scrollPreviewTarget(frameDocument, hash) {
   let id = hash.replace(/^#/, '');
   try { id = decodeURIComponent(id); } catch {}
   const target = frameDocument.getElementById(id);
-  target?.scrollIntoView();
+  target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   target?.focus({ preventScroll: true });
 }
-function showPreviewPage(filename, hash = '') {
-  if (!Object.hasOwn(previewPages, filename)) return;
-  previewDialog.querySelectorAll('[data-preview-page]').forEach(control => {
-    if (control.dataset.previewPage === filename) control.setAttribute('aria-current', 'page');
+function markPreviewSection(hash) {
+  previewDialog?.querySelectorAll('[data-preview-target]').forEach(control => {
+    if (control.dataset.previewTarget === hash) control.setAttribute('aria-current', 'page');
     else control.removeAttribute('aria-current');
   });
-  const documentCopy = new DOMParser().parseFromString(previewPages[filename], 'text/html');
+}
+function showPreview(hash = '#home') {
+  if (!previewPage) return;
+  markPreviewSection(hash);
+  const documentCopy = new DOMParser().parseFromString(previewPage, 'text/html');
   const base = document.createElement('base');
   base.href = new URL('../', location.href).href;
   documentCopy.head.prepend(base);
@@ -671,21 +674,13 @@ function showPreviewPage(filename, hash = '') {
     frameDocument.querySelectorAll('a[href]').forEach(link => link.addEventListener('click', event => {
       const href = link.getAttribute('href');
       if (href.startsWith('#')) {
-        event.preventDefault(); scrollPreviewTarget(frameDocument, href); return;
+        event.preventDefault(); markPreviewSection(href); scrollPreviewTarget(frameDocument, href); return;
       }
       const target = new URL(href, frameDocument.baseURI);
-      const targetFile = target.pathname.split('/').pop() || 'index.html';
-      const root = new URL('../', location.href);
-      const currentSitePath = target.pathname === new URL(targetFile, root).pathname || (targetFile === 'index.html' && target.pathname === root.pathname);
-      if (target.origin === location.origin && currentSitePath && Object.hasOwn(previewPages, targetFile)) {
-        event.preventDefault();
-        showPreviewPage(targetFile, target.hash);
-      } else if (target.origin === location.origin && target.hash && target.pathname === new URL('../' + filename, location.href).pathname) {
-        event.preventDefault();
-        scrollPreviewTarget(frameDocument, target.hash);
-      } else {
-        link.target = '_blank'; link.rel = 'noopener noreferrer';
+      if (target.origin === location.origin && target.hash && target.pathname === new URL('../index.html', location.href).pathname) {
+        event.preventDefault(); markPreviewSection(target.hash); scrollPreviewTarget(frameDocument, target.hash); return;
       }
+      link.target = '_blank'; link.rel = 'noopener noreferrer';
     }));
     if (hash) scrollPreviewTarget(frameDocument, hash);
   };
@@ -701,7 +696,7 @@ function openPreview() {
     return;
   }
   showErrors();
-  try { previewPages = renderWebsite(clone(content), { imageUrl: path => imagePreviews.get(path) }); }
+  try { previewPage = renderWebsite(clone(content), { imageUrl: path => imagePreviews.get(path) })['index.html']; }
   catch (error) { showErrors([error.message || 'Could not preview this draft.']); return; }
   if (!previewDialog) {
     previewDialog = element('dialog', 'preview-dialog'); previewDialog.id = 'preview-dialog';
@@ -711,18 +706,22 @@ function openPreview() {
     const title = element('h2', '', 'Preview changes'); title.id = 'preview-title';
     description.append(title, element('p', 'help', 'Unpublished preview. Close this window to continue editing.'));
     header.append(description, button('Close preview', 'button-secondary', () => previewDialog.close()));
-    const nav = element('nav', 'preview-nav'); nav.setAttribute('aria-label', 'Preview pages');
-    nav.append(...Object.entries(previewPageNames).map(([filename, label]) => {
-      const control = button(label, 'button-secondary', () => showPreviewPage(filename));
-      control.dataset.previewPage = filename; return control;
+    const nav = element('nav', 'preview-nav'); nav.setAttribute('aria-label', 'Preview sections');
+    nav.append(...previewSections.map(([hash, label]) => {
+      const control = button(label, 'button-secondary', () => {
+        const frameDocument = previewFrame?.contentDocument;
+        if (!frameDocument) return;
+        markPreviewSection(hash); scrollPreviewTarget(frameDocument, hash);
+      });
+      control.dataset.previewTarget = hash; return control;
     }));
     previewFrame = element('iframe', 'preview-frame');
     previewFrame.title = 'Unpublished website preview';
     previewFrame.setAttribute('sandbox', 'allow-same-origin allow-popups allow-popups-to-escape-sandbox');
     previewDialog.append(header, nav, previewFrame); document.body.append(previewDialog);
   }
-  const initial = ({ publications: 'publications.html', projects: 'publications.html', team: 'team.html', join: 'join.html', contact: 'contact.html' })[activeSection] || 'index.html';
-  showPreviewPage(initial);
+  const initial = ({ publications: '#publications', projects: '#publications', team: '#people', join: '#join', contact: '#contact' })[activeSection] || '#home';
+  showPreview(initial);
   previewDialog.showModal();
 }
 $('preview-button').addEventListener('click', openPreview);

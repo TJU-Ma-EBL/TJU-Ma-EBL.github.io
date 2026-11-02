@@ -194,7 +194,40 @@
         "title": "Ph.D. Students",
         "english": "",
         "emptyMessage": "Profiles to be added.",
-        "members": []
+        "members": [
+          {
+            "name": "Zhicheng Wang",
+            "englishName": "Zhicheng Wang",
+            "role": "Computer Vision and Machine Learning",
+            "initials": "ZW",
+            "photo": "assets/images/editor-bdc66857-ddd8-4062-9493-ec5beb455120.png",
+            "url": "https://orcid.org/0000-0001-7113-731X"
+          },
+          {
+            "name": "Jianwei Tan",
+            "englishName": "Jianwei Tan",
+            "role": "Imitation Learning and Embodied Agents",
+            "initials": "JT",
+            "photo": "assets/images/editor-88b2446a-3a05-4dc2-8cd1-8538953b3ae9.png",
+            "url": "https://orcid.org/0009-0004-9374-2552"
+          },
+          {
+            "name": "Xiang Zhang",
+            "englishName": "Xiang Zhang",
+            "role": "Embodied Navigation ",
+            "initials": "XZ",
+            "photo": "assets/images/editor-f8c9dbc4-1f43-4ded-9989-3e43f41b4aa5.jpg",
+            "url": "https://orcid.org/0009-0001-4844-348X"
+          },
+          {
+            "name": "Xiangyu Dong",
+            "englishName": "Xiangyu Dong",
+            "role": "Embodied Agents",
+            "initials": "XD",
+            "photo": "assets/images/editor-93c83e4a-085e-4c63-be55-2a034d5f8b83.png",
+            "url": "https://xiangyudongai.github.io/"
+          }
+        ]
       },
       {
         "id": "masters",

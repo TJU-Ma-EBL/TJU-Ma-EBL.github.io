@@ -30,6 +30,8 @@ html {
   position: relative;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
+  /* Header navigation jumps between sections of the single page. */
+  scroll-behavior: smooth;
   scroll-padding-top: 96px;
 }
 body {
@@ -158,6 +160,9 @@ main {
   animation-delay: 0.35s;
 }
 .page-home main { margin-top: 2em; }
+/* Every former page is now a section of index.html, reached from the header */
+.page-section { margin-top: 2.5em; }
+main > .page-section:first-child { margin-top: 0; }
 
 /* Section headings: bold with a light rule underneath,
    like h1/h2 inside .page__content of the reference theme */
@@ -268,7 +273,7 @@ details .abstract { margin: 6px 0 0; padding: 0 0 0 12px; border-left: 1px solid
 
 /* Page heading */
 .page-heading { margin-bottom: 1.5em; }
-.page-heading h1 { margin: 0 0 0.5em; padding-bottom: 0.5em; border-bottom: 1px solid var(--border); line-height: 1.2; }
+.page-heading h1, .page-heading h2 { margin: 0 0 0.5em; padding-bottom: 0.5em; border-bottom: 1px solid var(--border); line-height: 1.2; font-size: 1.4em; }
 .page-heading > p { max-width: 760px; margin: 0; font-size: 1em; }
 
 /* People */
@@ -442,6 +447,8 @@ img.avatar {
   .members { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
+  /* The stacked header is taller, so anchor jumps need more clearance */
+  html { scroll-padding-top: 150px; }
   .header-top { display: block; padding-top: 0.75em; }
   .header-aside { margin-top: 8px; text-align: left; }
   .header-links { justify-content: flex-start; margin-top: 4px; }
@@ -457,6 +464,7 @@ img.avatar {
   .application { gap: 2em; }
 }
 @media (max-width: 520px) {
+  html { scroll-padding-top: 175px; }
   .brand { font-size: 1.1em; }
   .navigation { column-gap: 1.1em; row-gap: 2px; }
   .navigation a { font-size: 0.8125em; }
@@ -485,6 +493,11 @@ img.avatar {
 @media (max-width: 360px) {
   .intro-portrait .lab-figure { width: 126px; }
   .lead-profile { grid-template-columns: 74px minmax(0, 1fr); gap: 1em; }
+}
+
+/* Respect reduced-motion preferences when jumping between sections */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 /* Print */

@@ -1,25 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { createHash } from 'node:crypto';
 import { renderWebsite } from '../admin/site-renderer.mjs';
 
 const fixture = JSON.parse(fs.readFileSync(new URL('./fixtures/editor-site.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(fixture);
-const hash = value => createHash('sha256').update(value).digest('hex');
-// Captured from the original build templates before extracting the shared renderer.
-const originalPages = {
-  "index.html": "a24074219ea46798aa02ee434002159adb698c0a439dddb4e0c2cf020344d052",
-  "publications.html": "7ea0b29af68b0e54c44fb05465bd6e64e28cfb7bf54536a75c82f84ddfc7c59c",
-  "team.html": "d2c96586fd5725a0a4defeb5710ba9dbade7a40a1d23d672ac65ef4bc6462b71",
-  "join.html": "9e4275863e955719ec407fe95cff8d19a2acc10d5b25575b7ac4b1a5dbba7a8d",
-  "contact.html": "92b038162cf794e3db0b9846c96d1ba42c3f079c5114d391ab850d9da3de16cf"
-};
 
-test('shared renderer preserves every original page byte for byte', () => {
+test('shared renderer emits one page whose navigation links to every section', () => {
   const pages = renderWebsite(copy());
-  assert.deepEqual(Object.keys(pages), Object.keys(originalPages));
-  for (const [name, digest] of Object.entries(originalPages)) assert.equal(hash(pages[name]), digest, name);
+  assert.deepEqual(Object.keys(pages), ['index.html']);
+  const html = pages['index.html'];
+  for (const [hash, id] of [['#home', 'home'], ['#publications', 'publications'], ['#people', 'people'], ['#join', 'join'], ['#contact', 'contact']]) {
+    assert.ok(html.includes(`id="${id}"`), id);
+    assert.ok(html.includes(`href="${hash}"`), hash);
+  }
+  assert.equal(html.match(/<h1\b/g)?.length, 1, 'the merged page keeps a single h1');
+  assert.ok(!/href="\.\/(publications|team|join|contact)\.html"/.test(html), 'no links to removed pages');
 });
 
 test('rendering leaves the editable data unchanged', () => {
@@ -41,8 +37,7 @@ test('draft photos render from a blob URL without a file on disk', () => {
     return path === upload ? blob : undefined;
   } });
   assert.ok(visited.includes(upload));
-  assert.ok(pages['index.html'].includes('src="' + blob + '"'));
-  assert.ok(pages['team.html'].includes('src="' + blob + '"'));
+  assert.equal(pages['index.html'].split('src="' + blob + '"').length - 1, 2, 'portrait and faculty photo use the blob URL');
   assert.ok(!pages['index.html'].includes('src="' + upload + '"'));
 });
 

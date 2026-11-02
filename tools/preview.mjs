@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
     const raw = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
     const file = path.resolve(root, '.' + (raw === '/' ? '/index.html' : raw === '/admin' || raw === '/admin/' ? '/admin/index.html' : raw));
     const relative = path.relative(root, file);
-    const publicFile = /^(index|publications|team|join|contact)\.html$/.test(relative) || relative.startsWith('assets' + path.sep) || relative.startsWith('admin' + path.sep) || relative === 'data' + path.sep + 'site.json';
+    const publicFile = relative === 'index.html' || relative.startsWith('assets' + path.sep) || relative.startsWith('admin' + path.sep) || relative === 'data' + path.sep + 'site.json';
     if (!publicFile || relative.startsWith('..') || path.isAbsolute(relative) || !fs.existsSync(file) || !fs.statSync(file).isFile()) { res.writeHead(404).end('Not found'); return; }
     res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     if (req.method === 'HEAD') res.end(); else fs.createReadStream(file).pipe(res);

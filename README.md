@@ -1,6 +1,6 @@
 # 马晓光教授课题组主页
 
-沿用 [Huazhe Xu 学术主页](http://hxu.rocks/index.html) 的简洁内容组织，现已根据[天津大学人工智能学院马晓光教授官方介绍](https://sai.tju.edu.cn/info/1361/6321.htm)更新。保留首页、研究成果、团队成员、加入我们、联系我们五个栏目，适合 GitHub Pages。
+沿用 [Huazhe Xu 学术主页](http://hxu.rocks/index.html) 的简洁内容组织，现已根据[天津大学人工智能学院马晓光教授官方介绍](https://sai.tju.edu.cn/info/1361/6321.htm)更新。首页、研究成果、团队成员、加入我们、联系我们五个栏目合并在一页 `index.html` 中，依次排列，适合 GitHub Pages。
 
 网站访客页面现为全英文：Home、Publications、People、Join Us、Contact。正文和姓名也请填写英文。中文 README 与资料来源说明供本地维护使用。
 
@@ -8,7 +8,7 @@
 
 现在还提供英文 **`admin/` 内容编辑页面**，可用表单维护全部内容。按 [EDITOR_SETUP.md](EDITOR_SETUP.md) 完成一次设置后，有权限的人提交即可自动生成并发布网页。
 
-后台提供论文、老师、博士、硕士、实习生和新闻的快捷新增入口；自动生成新论文编号和成员缩写，支持照片上传、草稿导入导出，以及使用正式网页模板的五页未发布预览。预览不需要 GitHub 登录，提交需要自己的有效编辑权限。
+后台提供论文、老师、博士、硕士、实习生和新闻的快捷新增入口；自动生成新论文编号和成员缩写，支持照片上传、草稿导入导出，以及使用正式网页模板的单页未发布预览。预览不需要 GitHub 登录，提交需要自己的有效编辑权限。
 
 **已生成完整网页，可以直接双击 `index.html` 浏览。上传这些现成网页不需要安装依赖或配置构建服务。**
 
@@ -18,7 +18,7 @@
 
 ## 1. 在自己的电脑上查看
 
-双击文件夹中的 `index.html`，浏览器会打开首页。顶部可以切换五个栏目，所有内容均为静态 HTML，不依赖 JavaScript、网络字体或第三方 CDN。
+双击文件夹中的 `index.html`，浏览器会打开整站。顶部五个栏目按钮会平滑滚动到对应内容，所有内容均为静态 HTML，不依赖 JavaScript、网络字体或第三方 CDN。
 
 也可以在当前文件夹打开终端，运行 `npm start`，再访问 <http://127.0.0.1:4173>。按 `Ctrl+C` 结束预览。此方式需要 Node.js 18 或更高版本；当前电脑已经检测到 Node.js 24。
 
@@ -114,15 +114,11 @@ JSON 中的键名和文字要保留英文双引号，每个条目之间用英文
 ## 4. 文件结构
 
 ```text
-index.html                 首页
-publications.html          研究成果
-team.html                  团队成员
-join.html                  加入我们
-contact.html               联系我们
+index.html                 整站单页，含首页、研究成果、团队成员、加入我们、联系我们五个部分
 assets/css/style.css       样式、颜色和手机布局
 assets/images/             首页图片与成员照片
 data/site.json             日常维护的内容文件
-tools/build.mjs            从内容文件生成五个静态页面
+tools/build.mjs            从内容文件生成单页 index.html
 tools/preview.mjs          仅用于本机的预览服务
 admin/                     英文内容编辑页与 GitHub 提交逻辑
 admin/site-renderer.mjs     正式网站构建和后台草稿预览共用的模板

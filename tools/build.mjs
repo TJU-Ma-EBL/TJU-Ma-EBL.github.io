@@ -20,10 +20,12 @@ for (const image of new Set(imagePaths(data))) {
 }
 fs.mkdirSync(output, { recursive: true });
 for (const [file, html] of rendered) fs.writeFileSync(path.join(output, file), html, 'utf8');
+// The website is a single page now; remove per-page files left by older builds.
+for (const legacyPage of ['publications.html', 'team.html', 'join.html', 'contact.html']) fs.rmSync(path.join(output, legacyPage), { force: true });
 if (output !== root) {
   for (const directory of ['assets', 'admin']) fs.cpSync(path.join(root, directory), path.join(output, directory), { recursive: true });
   fs.mkdirSync(path.join(output, 'data'), { recursive: true });
   fs.copyFileSync(path.join(root, 'data/site.json'), path.join(output, 'data/site.json'));
   fs.copyFileSync(path.join(root, '.nojekyll'), path.join(output, '.nojekyll'));
 }
-console.log(`Updated ${rendered.length} pages${output !== root ? ' in ' + relativeOutput : ''}. Run npm start to preview the website and editor.`);
+console.log(`Updated ${rendered.length} page${rendered.length === 1 ? '' : 's'}${output !== root ? ' in ' + relativeOutput : ''}. Run npm start to preview the website and editor.`);
