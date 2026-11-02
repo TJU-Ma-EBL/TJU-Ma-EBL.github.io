@@ -261,6 +261,26 @@ figcaption {
 .publication a { color: var(--link); }
 .publication cite { font-style: italic; color: var(--muted); }
 .inline-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; font-size: 0.8125em; }
+
+/* Selected publications: figure cards like a paper overview */
+.publication-cards { display: grid; gap: 2.25em; }
+.publication-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 300px) minmax(0, 1fr);
+  gap: 2em;
+  align-items: center;
+}
+.publication-card + .publication-card { padding-top: 2.25em; border-top: 1px solid var(--border); }
+.card-figure { min-width: 0; margin: 0; }
+.card-figure img { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18), 0 20px 48px rgba(23, 75, 122, 0.32); }
+.card-body { min-width: 0; }
+.card-body h3 { margin: 0 0 0.35em; font-size: 1.1em; line-height: 1.35; }
+.card-body h3 a { color: var(--link); }
+.card-authors { margin: 0 0 0.25em; font-weight: 600; }
+.card-venue { margin: 0; }
+.publication-card cite { font-style: italic; color: var(--muted); font-size: 0.9375em; }
+.card-abstract { margin: 0.75em 0 0; padding-inline-start: 1.25em; font-size: 0.9375em; line-height: 1.6; }
+.card-abstract li { margin-bottom: 0.35em; }
 details { margin-top: 5px; font-size: 0.875em; }
 summary {
   width: fit-content;
@@ -369,6 +389,21 @@ img.avatar {
 .email { font-size: 1.125em; }
 .subject { margin: 9px 0 0; color: var(--muted); font-size: 0.875em; overflow-wrap: anywhere; }
 
+/* Join Us: intro text plus a compact application panel */
+.join-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2em;
+  margin-top: 0.5em;
+  padding: 1.5em 1.75em;
+  background: var(--border);
+  border-radius: var(--radius);
+}
+.join-panel > div { min-width: 0; }
+.join-panel .contact-label { margin-bottom: 0.5em; }
+.join-panel p:not(.contact-label) { margin: 0; font-size: 0.9375em; line-height: 1.6; }
+.join-panel .email { font-size: 1.05em; font-weight: 600; }
+
 /* Contact */
 .contact-layout {
   display: grid;
@@ -460,8 +495,11 @@ img.avatar {
   .page-home .intro-copy > .intro-lead { font-size: 1.1em; }
   .section, .page-home .section { margin-top: 1.75em; }
   .research-item, .opportunity { grid-template-columns: 180px minmax(0, 1fr); gap: 3px 20px; }
+  .publication-card { grid-template-columns: 1fr; gap: 1em; }
+  .card-figure { max-width: 340px; }
   .contact-layout { gap: 2em; }
   .application { gap: 2em; }
+  .join-panel { grid-template-columns: 1fr; gap: 1.25em; }
 }
 @media (max-width: 520px) {
   html { scroll-padding-top: 175px; }

@@ -646,7 +646,7 @@ let previewDialog = null;
 let previewFrame = null;
 let previewPage = null;
 const previewSections = [
-  ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact']
+  ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni']
 ];
 function scrollPreviewTarget(frameDocument, hash) {
   let id = hash.replace(/^#/, '');

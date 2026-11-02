@@ -1,7 +1,7 @@
 const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0,10) === value;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 export function imagePaths(data) {
-  return [data?.site?.image, ...(data?.team?.teachers || []).map(p => p.photo), ...(data?.team?.groups || []).flatMap(g => (g.members || []).map(p => p.photo))].filter(Boolean);
+  return [data?.site?.image, ...(data?.publications || []).map(p => p.image), ...(data?.team?.teachers || []).map(p => p.photo), ...(data?.team?.groups || []).flatMap(g => (g.members || []).map(p => p.photo))].filter(Boolean);
 }
 export function validateContent(data, { knownAssets } = {}) {
   const errors = [];
@@ -53,6 +53,7 @@ export function validateContent(data, { knownAssets } = {}) {
     paperIDs.add(p.id); if (!/^\d{4}$/.test(p.year || '')) fail(`Paper ${i+1}: enter a four-digit year.`);
     if (p.titleLang && p.titleLang !== 'en') fail(`Paper ${i+1}: title language must be en.`);
     if (typeof p.selected !== 'boolean') fail(`Paper ${i+1}: selected must be true or false.`);
+    photos(p.image, `Paper ${i+1}: image`);
     links(p.links, `Paper ${i+1} links`);
   });
   const team = fields(data.team, 'People', ['intro']);

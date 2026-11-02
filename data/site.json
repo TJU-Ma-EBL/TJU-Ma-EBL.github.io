@@ -12,30 +12,21 @@
     "postalCode": "",
     "image": "assets/images/ma-xiaoguang.jpg",
     "imageAlt": "Professor Xiaoguang Ma's portrait from the faculty directory of Tianjin University's School of Artificial Intelligence",
-    "imageCaption": "Xiaoguang Ma · Beiyang Chair Professor",
-    "links": [
-      {
-        "label": "School Website",
-        "url": "https://sai.tju.edu.cn/"
-      },
-      {
-        "label": "Faculty Profile",
-        "url": "https://sai.tju.edu.cn/info/1361/6321.htm"
-      }
-    ],
+    "imageCaption": "Xiaoguang Ma · Peiyang Chair Professor",
+    "links": [],
     "imagePortrait": true,
     "imageWidth": 300,
     "imageHeight": 415,
-    "imageSource": "https://sai.tju.edu.cn/szdw/qzjs/k_o.htm",
+    "imageSource": "",
     "sourceUrl": "https://sai.tju.edu.cn/info/1361/6321.htm",
     "subtitle": ""
   },
   "home": {
     "eyebrow": "",
-    "heading": "Embodied intelligence & autonomous systems",
+    "heading": "Embodied Brain Lab (EBL)",
     "paragraphs": [
-      "The group works on embodied robotics, aerial vision-language navigation, and agent-driven robotic systems. Topics include perception, learning, and autonomous decision-making in physical environments.",
-      "Xiaoguang Ma is a Beiyang Chair Professor at Tianjin University's School of Artificial Intelligence and supervises Ph.D. and master's students. His research covers Physical AI, Agentic AI, AI4Engr, and unmanned systems."
+      "The EBL focuses on agent driven embodied brain research on robotics, UAV, and other unmanned systems, and other fields, such as Physical AI, Agentic AI, AI4Engr, etc.",
+      "Xiaoguang Ma is a Peiyang Chair Professor at Tianjin University's School of Artificial Intelligence and supervises Ph.D. and master's students. His research covers Physical AI, Agentic AI, AI4Engr, and unmanned systems."
     ],
     "recruitment": "For postdoctoral, Ph.D., master's, and undergraduate research opportunities in embodied intelligence and AI agents, please email Xiaoguang Ma."
   },
@@ -83,8 +74,9 @@
       "authors": "Haoyu Tong et al.",
       "venue": "IROS 2026 · Accepted",
       "area": "Aerial Navigation",
-      "abstract": "Combines perception, verification, and execution with structured visual prompts to improve spatial reasoning in UAV vision-language navigation.",
+      "abstract": "A triple-phase architecture uses structured visual prompting so that vision-language models can reason directly on image planes for aerial VLN, without extra training or intermediate scene graphs. On the CityNav benchmark it improves the success rate by 70.3% over the fully trained state of the art.",
       "selected": true,
+      "image": "assets/images/1.png",
       "links": [
         {
           "label": "arXiv",
@@ -106,8 +98,9 @@
       "authors": "Xiangyu Dong et al.",
       "venue": "ACSAT 2026 (as listed on the school website) · arXiv:2507.13152",
       "area": "Vision-Language Navigation",
-      "abstract": "Combines hierarchical memory, experience retrieval, and reflection so vision-language navigation agents can accumulate experience and improve decisions during testing.",
+      "abstract": "The first multimodal LLM-powered self-evolving VLN framework, which keeps evolving during testing through hierarchical memory, retrieval-augmented reasoning, and reflection. It achieves 57% and 35.2% success rates in unseen environments on R2R and REVERSE, surpassing current state-of-the-art methods.",
       "selected": true,
+      "image": "assets/images/2.png",
       "links": [
         {
           "label": "arXiv",
@@ -129,8 +122,9 @@
       "authors": "Jun Xie et al.",
       "venue": "ECAI 2025 · FAIA 413: 3559–3566",
       "area": "Imitation Learning",
-      "abstract": "Inspired by subconscious behavior, the method uses intention-aware sampling and cognitive offloading to reduce redundant reasoning and improve execution efficiency in dual-arm robotic imitation learning.",
+      "abstract": "Mimics subconscious-driven habitual actions through intent-aware sampling and hierarchical cognitive reasoning, allowing dual-arm robots to execute imitation-learning tasks 100% to 200% faster than state-of-the-art policies while keeping consistently higher success rates.",
       "selected": true,
+      "image": "assets/images/3.png",
       "links": [
         {
           "label": "Publication Record",
@@ -248,7 +242,7 @@
       {
         "name": "Xiaoguang Ma",
         "englishName": "Xiaoguang Ma",
-        "role": "Beiyang Chair Professor · Supervisor of Ph.D. and Master's Students",
+        "role": "Peiyang Chair Professor · Supervisor of Ph.D. and Master's Students",
         "initials": "XM",
         "photo": "assets/images/ma-xiaoguang.jpg",
         "bio": "Xiaoguang Ma holds a Ph.D. in Mechanical Control from the University of California, Berkeley. He has worked in industrial research and development and university teaching, and joined Tianjin University's School of Artificial Intelligence in 2026. He teaches Introduction to Embodied Intelligence and related practical courses.",
@@ -315,42 +309,13 @@
     ]
   },
   "join": {
-    "intro": "Please email Xiaoguang Ma to discuss research opportunities in embodied intelligence and agent-driven robotics.",
-    "positions": [
-      {
-        "title": "Postdoctoral Researchers",
-        "english": "",
-        "description": "Research in embodied robotics, low-altitude intelligent systems, and Agentic AI.",
-        "note": "Please email to discuss position requirements and arrangements."
-      },
-      {
-        "title": "Ph.D. Students",
-        "english": "",
-        "description": "Doctoral research in embodied intelligence, robotics, and autonomous systems.",
-        "note": "Eligibility and application dates follow the current university and school admissions notices."
-      },
-      {
-        "title": "Master's Students",
-        "english": "",
-        "description": "Research and engineering work in the group's research areas.",
-        "note": "Please contact us in line with the university and school admissions schedule."
-      },
-      {
-        "title": "Undergraduate Research Interns",
-        "english": "",
-        "description": "For undergraduates with practical engineering skills and an interest in embodied intelligence.",
-        "note": "In your email, describe your previous projects and availability."
-      }
-    ],
-    "application": [
-      "Email your application materials to coltlight@163.com.",
-      "Include your CV and relevant research or engineering project experience.",
-      "Add links to publications, code, or a personal website if available."
-    ],
-    "subject": "Position-Name-University-Year of Study-Research Area",
+    "intro": "We welcome passionate postdocs, Ph.D. students, master's students, and undergraduate interns with solid engineering skills and the ambition to publish high-level papers in the field of agent driven embodied brain to join our group.",
+    "positions": [],
+    "application": [],
+    "subject": "[Position] – Name – University – Grade – Research Interest",
     "cultureTitle": "Recruitment",
     "cultureEnglish": "",
-    "culture": "Recruitment is ongoing, according to the official faculty profile. Email Xiaoguang Ma for current openings, research topics, and application details.",
+    "culture": "Recruitment is open on an ongoing basis.",
     "sourceUrl": "https://sai.tju.edu.cn/info/1361/6321.htm"
   },
   "contact": {

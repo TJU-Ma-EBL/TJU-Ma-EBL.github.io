@@ -7,7 +7,7 @@
  */
 export function renderWebsite(data, { imageUrl } = {}) {
 if (imageUrl !== undefined && typeof imageUrl !== 'function') throw new TypeError('imageUrl must be a function.');
-const { site, home, research, news, publications, team, join, contact, projects = [] } = data;
+const { site, home, research, news, publications, team, join, contact, projects = [], alumni = {} } = data;
 const escape = (value = '') => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const safeUrl = value => /^(https?:\/\/|mailto:|\.\/|assets\/|#)/i.test(value || '') ? value : '';
 const relativeAsset = value => {
@@ -49,8 +49,19 @@ function publication(paper) {
   return `<li class="publication" id="${escape(paper.id)}">${escape(sentence(paper.authors))} ${linkedTitle} <cite>${escape(sentence(venue))}</cite>${example}</li>`;
 }
 const publicationList = papers => papers.length ? `<ol class="publication-list">${papers.map(publication).join('')}</ol>` : '<p class="empty">No publications listed.</p>';
+const publicationCard = paper => {
+  const resources = paper.links.filter(item => safeUrl(item.url));
+  const resource = resources.find(item => /^(pdf|doi|arxiv|paper|publication record|introduction)$/i.test(item.label)) || resources[0];
+  const title = `<span${paper.titleLang ? ` lang="${escape(paper.titleLang)}"` : ''}>${escape(sentence(paper.title))}</span>`;
+  const linkedTitle = resource ? `<a href="${escape(resource.url)}"${/^https?:/i.test(resource.url) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${title}</a>` : title;
+  const figure = paper.image ? `<figure class="card-figure"><img src="${escape(relativeAsset(paper.image))}" alt="Overview figure of the paper ${escape(paper.title)}" loading="lazy"></figure>` : '';
+  const abstract = paper.abstract ? `<ul class="card-abstract"><li>${escape(paper.abstract)}</li></ul>` : '';
+  return `<article class="publication-card">${figure}<div class="card-body"><h3>${linkedTitle}</h3><p class="card-authors">${escape(paper.authors)}</p><p class="card-venue"><cite>${escape(sentence(paper.venue))}</cite></p>${abstract}</div></article>`;
+};
+const selectedPublications = publications.filter(p => p.selected);
+const publicationCards = selectedPublications.length ? `<div class="publication-cards">${selectedPublications.map(publicationCard).join('')}</div>` : '<p class="empty">No publications listed.</p>';
 
-const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact'] ];
+const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni'] ];
 const year = site.updated.slice(0, 4);
 function layout(content) {
   const favicon = 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="4" fill="#174b7a"/><text x="24" y="32" fill="white" text-anchor="middle" font-family="Georgia,serif" font-size="25">${escape(site.mark)}</text></svg>`);
@@ -75,7 +86,7 @@ function layout(content) {
   <header class="site-header">
     <div class="header-top">
       <div class="site-identity"><a class="brand" href="#home" aria-label="${escape(site.name)} home">${escape(site.name)}</a>${site.subtitle ? `<p class="site-subtitle">${escape(site.subtitle)}</p>` : ''}</div>
-      <div class="header-aside"><p class="site-institution">${escape(site.institution)}</p>${links(site.links, 'header-links')}</div>
+      ${site.links?.length ? `<div class="header-aside">${links(site.links, 'header-links')}</div>` : ''}
     </div>
     <nav class="navigation" aria-label="Main navigation">${nav.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>
     ${site.demo ? '<p class="demo-note"><span>Example site</span>Names, members, and publications are examples. Replace them before publishing.</p>' : ''}
@@ -89,11 +100,10 @@ function layout(content) {
 }
 
 const homeContent = `<section class="page-section intro${site.imagePortrait ? ' intro-portrait' : ''}" id="home" aria-labelledby="intro-title">
-  <div class="intro-copy">${home.eyebrow ? `<p class="eyebrow">${escape(home.eyebrow)}</p>` : ''}<h1 id="intro-title">${escape(home.heading)}</h1>${home.paragraphs.map((p, index) => `<p${index === 0 ? ' class="intro-lead"' : ''}>${escape(p)}</p>`).join('')}<div class="recruit-note"><p>${escape(home.recruitment)} <a href="#join">Open positions</a>.</p></div></div>
+  <div class="intro-copy">${home.eyebrow ? `<p class="eyebrow">${escape(home.eyebrow)}</p>` : ''}<h1 id="intro-title">${escape(home.heading)}</h1>${home.paragraphs.map((p, index) => `<p${index === 0 ? ' class="intro-lead"' : ''}>${escape(p)}</p>`).join('')}<div class="recruit-note"><p>${escape(home.recruitment)}</p></div></div>
   <figure class="lab-figure"><img class="lab-photo${site.imagePortrait ? ' portrait-photo' : ''}" src="${escape(relativeAsset(site.image))}" alt="${escape(site.imageAlt)}" width="${Number(site.imageWidth) || 800}" height="${Number(site.imageHeight) || 600}" fetchpriority="high"><figcaption><span class="photo-caption">${escape(site.imageCaption).replaceAll(' · ', '<br>')}</span>${safeUrl(site.imageSource) ? `<a class="photo-credit" href="${escape(site.imageSource)}" target="_blank" rel="noopener noreferrer">Faculty directory</a>` : ''}</figcaption></figure>
 </section>
-<section class="section" id="research" aria-label="Research">${sectionTitle('Research')}<dl class="research-list">${research.map(item => `<div class="research-item"><dt>${escape(item.title)}</dt><dd>${escape(item.description)}</dd></div>`).join('')}</dl></section>
-<section class="section" id="selected-publications" aria-label="Selected Publications">${sectionTitle('Selected publications', '<a href="#publications">All publications</a>')}${publicationList(publications.filter(p => p.selected))}</section>
+<section class="section" id="selected-publications" aria-label="Selected Publications">${sectionTitle('Selected publications', '<a href="#publications">All publications</a>')}${publicationCards}</section>
 <section class="section" id="news" aria-label="News">${sectionTitle('News')}<ul class="news-list">${news.map(item => `<li><time datetime="${escape(item.date.replaceAll('.', '-'))}">${escape(item.date)}</time><p>${safeUrl(item.url) ? `<a href="${escape(item.url)}" target="_blank" rel="noopener noreferrer">${escape(item.text)}</a>` : escape(item.text)}</p></li>`).join('')}</ul></section>`;
 
 const sortedPublications = [...publications].sort((a, b) => Number(b.year) - Number(a.year));
@@ -111,12 +121,14 @@ const teamContent = `<section class="page-section" id="people" aria-labelledby="
   + team.groups.map(group => `<section class="team-group"${group.id ? ` id="${escape(group.id)}"` : ''}>${sectionTitle(escape(group.title))}${group.members.length ? `<div class="members">${group.members.map(memberCard).join('')}</div>` : `<p class="group-empty">${escape(group.emptyMessage || 'Member information will be added soon.')}</p>`}</section>`).join('')
   + `</section>`;
 
-const joinContent = `<section class="page-section" id="join" aria-labelledby="join-title">` + pageHeading('join', 'Join Us', join.intro) + `<div class="opportunities">${join.positions.map(position => `<section class="opportunity"><h2>${escape(position.title)}</h2>${position.english && position.english !== position.title ? `<p class="english-label">${escape(position.english)}</p>` : ''}<p>${escape(position.description)}</p><p class="note">${escape(position.note)}</p></section>`).join('')}</div><section class="application"><div><h2>How to apply</h2><ul>${join.application.map(item => `<li>${escape(item)}</li>`).join('')}</ul></div><div><p class="contact-label">Contact email</p>${email()}<p class="subject">Email subject format:<br>${escape(join.subject)}</p></div></section><section class="section">${sectionTitle(escape(join.cultureTitle || 'Recruitment'))}<p>${escape(join.culture)}</p>${links([{ label: 'Recruitment details on the faculty profile', url: join.sourceUrl }])}</section></section>`;
+const joinContent = `<section class="page-section" id="join" aria-labelledby="join-title">` + pageHeading('join', 'Join Us', join.intro) + `<div class="join-panel"><div><p class="contact-label">Application materials</p><p>Please send your application materials to</p>${email()}</div><div><p class="contact-label">Email subject format</p><p class="subject">${escape(join.subject)}</p></div><div><p class="contact-label">${escape(join.cultureTitle || 'Recruitment')}</p><p>${escape(join.culture)}</p></div></div></section>`;
 
-const contactContent = `<section class="page-section" id="contact" aria-labelledby="contact-title">` + pageHeading('contact', 'Contact', contact.intro) + `<div class="contact-layout"><dl class="contact-list"><div><dt>Email</dt><dd>${email()}</dd></div><div><dt>Institution</dt><dd>${escape(site.institution)}</dd></div><div><dt>Visits</dt><dd>${escape(site.address)}</dd></div>${site.postalCode ? `<div><dt>Postal code</dt><dd>${escape(site.postalCode)}</dd></div>` : ''}</dl><aside class="contact-aside"><h2>Visits</h2><p>${escape(contact.visit)}</p><p class="muted">${escape(contact.directions)}</p><a href="#join">Applications and internships</a>${links(site.links)}</aside></div></section>`;
+const contactContent = `<section class="page-section" id="contact" aria-labelledby="contact-title">` + pageHeading('contact', 'Contact', contact.intro) + `<dl class="contact-list"><div><dt>Email</dt><dd>${email()}</dd></div></dl></section>`;
+
+const alumniContent = `<section class="page-section" id="alumni" aria-labelledby="alumni-title">` + pageHeading('alumni', 'Alumni', '') + `<p class="empty">${escape(alumni.intro || 'Alumni information will be added soon.')}</p></section>`;
 
 // Formerly separate pages, now sections of one page reached by the header anchors.
-const pageContent = homeContent + publicationsContent + teamContent + joinContent + contactContent;
+const pageContent = homeContent + publicationsContent + teamContent + joinContent + contactContent + alumniContent;
 // Keep literal HTML whitespace identical for the published page and previews.
 return { 'index.html': layout(pageContent) };
 }
