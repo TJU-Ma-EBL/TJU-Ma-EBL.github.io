@@ -495,8 +495,6 @@ img.avatar {
   .page-home .intro-copy > .intro-lead { font-size: 1.1em; }
   .section, .page-home .section { margin-top: 1.75em; }
   .research-item, .opportunity { grid-template-columns: 180px minmax(0, 1fr); gap: 3px 20px; }
-  .publication-card { grid-template-columns: 1fr; gap: 1em; }
-  .card-figure { max-width: 340px; }
   .contact-layout { gap: 2em; }
   .application { gap: 2em; }
   .join-panel { grid-template-columns: 1fr; gap: 1.25em; }
@@ -504,6 +502,8 @@ img.avatar {
 @media (max-width: 520px) {
   html { scroll-padding-top: 175px; }
   .brand { font-size: 1.1em; }
+  .publication-card { grid-template-columns: 1fr; gap: 1em; }
+  .card-figure { max-width: 340px; }
   .navigation { column-gap: 1.1em; row-gap: 2px; }
   .navigation a { font-size: 0.8125em; }
   .intro-portrait .lab-figure { width: 140px; }
