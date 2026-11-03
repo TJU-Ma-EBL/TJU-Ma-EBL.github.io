@@ -121,7 +121,7 @@ const teamContent = `<section class="page-section" id="people" aria-labelledby="
   + team.groups.map(group => `<section class="team-group"${group.id ? ` id="${escape(group.id)}"` : ''}>${sectionTitle(escape(group.title))}${group.members.length ? `<div class="members">${group.members.map(memberCard).join('')}</div>` : `<p class="group-empty">${escape(group.emptyMessage || 'Member information will be added soon.')}</p>`}</section>`).join('')
   + `</section>`;
 
-const joinContent = `<section class="page-section" id="join" aria-labelledby="join-title">` + pageHeading('join', 'Join Us', join.intro) + `<div class="join-panel"><div><p class="contact-label">Application materials</p><p>Please send your application materials to</p>${email()}</div><div><p class="contact-label">Email subject format</p><p class="subject">${escape(join.subject)}</p></div><div><p class="contact-label">${escape(join.cultureTitle || 'Recruitment')}</p><p>${escape(join.culture)}</p></div></div></section>`;
+const joinContent = `<section class="page-section" id="join" aria-labelledby="join-title">` + pageHeading('join', 'Join Us', join.intro) + `<p class="join-note">Please send your application materials to ${email()}. Email subject format: <span class="subject">${escape(join.subject)}</span>. ${escape(join.culture)}</p></section>`;
 
 const contactContent = `<section class="page-section" id="contact" aria-labelledby="contact-title">` + pageHeading('contact', 'Contact', contact.intro) + `<dl class="contact-list"><div><dt>Email</dt><dd>${email()}</dd></div></dl></section>`;
 

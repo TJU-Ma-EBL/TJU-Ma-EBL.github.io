@@ -25,8 +25,7 @@
     "eyebrow": "",
     "heading": "Embodied Brain Lab (EBL)",
     "paragraphs": [
-      "The EBL focuses on agent driven embodied brain research on robotics, UAV, and other unmanned systems, and other fields, such as Physical AI, Agentic AI, AI4Engr, etc.",
-      "Xiaoguang Ma is a Peiyang Chair Professor at Tianjin University's School of Artificial Intelligence and supervises Ph.D. and master's students. His research covers Physical AI, Agentic AI, AI4Engr, and unmanned systems."
+      "The EBL focuses on agent driven embodied brain research on robotics, UAV, and other unmanned systems, and other fields, such as Physical AI, Agentic AI, AI4Engr, etc."
     ],
     "recruitment": "For postdoctoral, Ph.D., master's, and undergraduate research opportunities in embodied intelligence and AI agents, please email Xiaoguang Ma."
   },
@@ -146,8 +145,9 @@
       "authors": "S. Huang et al.",
       "venue": "IEEE ICRA 2025 · pp. 14542–14549",
       "area": "SLAM Datasets",
-      "abstract": "Provides synchronized data across robotic platforms, sensors, and complex environments to support the evaluation and comparison of SLAM systems.",
-      "selected": false,
+      "abstract": "A multi-platform, multi-sensor, and multi-scenario SLAM dataset of 55 sequences recorded by a handheld rig, an unmanned ground vehicle, a quadruped robot, a car, and a UAV. Its 21 sensors include stereo event cameras, infrared and RGB cameras, five LiDARs, three IMUs, and RTK GNSS/INS, covering extreme illumination, aggressive motion, low texture, and high-speed driving, together with a benchmark of state-of-the-art SLAM systems.",
+      "selected": true,
+      "image": "assets/images/4.png",
       "links": [
         {
           "label": "DOI",
@@ -169,8 +169,9 @@
       "authors": "J. Shi et al.",
       "venue": "IEEE Transactions on Multimedia · 2025",
       "area": "Image Fusion",
-      "abstract": "Studies infrared and visible image fusion using a frequency-domain Transformer.",
-      "selected": false,
+      "abstract": "The first study of image fusion from a frequency-domain perspective: a frequency-domain feature extraction module, a frequency-domain Transformer that merges the features, and a residual reconstruction module produce the fused image. On MSRS, TNO, and Roadscene it outperforms several state-of-the-art fusion methods, showing potential as a generic backbone for visible and infrared image fusion.",
+      "selected": true,
+      "image": "assets/images/5.png",
       "links": [
         {
           "label": "DOI",
@@ -181,7 +182,7 @@
     }
   ],
   "team": {
-    "intro": "Faculty and students in Xiaoguang Ma's research group.",
+    "intro": "",
     "groups": [
       {
         "id": "phd",
@@ -242,10 +243,10 @@
       {
         "name": "Xiaoguang Ma",
         "englishName": "Xiaoguang Ma",
-        "role": "Peiyang Chair Professor · Supervisor of Ph.D. and Master's Students",
+        "role": "Peiyang Chair Professor · School of Artificial Intelligence, Tianjin University",
         "initials": "XM",
         "photo": "assets/images/ma-xiaoguang.jpg",
-        "bio": "Xiaoguang Ma holds a Ph.D. in Mechanical Control from the University of California, Berkeley. He has worked in industrial research and development and university teaching, and joined Tianjin University's School of Artificial Intelligence in 2026. He teaches Introduction to Embodied Intelligence and related practical courses.",
+        "bio": "Xiaoguang Ma serves as a Peiyang Chair Professor at the School of Artificial Intelligence, Tianjin University, and is a Standing Committee Member of the CCF Technical Committee on Intelligent Robotics and of the CAAI Technical Committee on Human-Machine Integration. His research covers agent-driven Physical AI, AI4Engr, and unmanned systems.",
         "links": [
           {
             "label": "Official Faculty Profile",
@@ -323,27 +324,5 @@
     "visit": "Before visiting, please email to confirm the campus, building, and meeting time.",
     "directions": "University and school websites:"
   },
-  "projects": [
-    {
-      "title": "Research and Demonstration of a Large-Model Platform for Embodied Intelligence in Industrial Robotics",
-      "period": "2024–2027",
-      "funding": "Hunan Provincial Major Project Fund",
-      "role": "Principal Investigator",
-      "amount": "CNY 5 million"
-    },
-    {
-      "title": "AI-Based Online Inspection for Robotic Harmonic Reducer Manufacturing",
-      "period": "2022–2025",
-      "funding": "Guangdong Basic and Applied Basic Research Foundation",
-      "role": "Principal Investigator",
-      "amount": "CNY 300,000"
-    },
-    {
-      "title": "Object Detection in Complex Backgrounds for Construction Robots",
-      "period": "2023–2024",
-      "funding": "Commissioned Research Project",
-      "role": "Principal Investigator",
-      "amount": "CNY 2 million"
-    }
-  ]
+  "projects": []
 }
