@@ -75,7 +75,7 @@
       "area": "Aerial Navigation",
       "abstract": "A triple-phase architecture uses structured visual prompting so that vision-language models can reason directly on image planes for aerial VLN, without extra training or intermediate scene graphs. On the CityNav benchmark it improves the success rate by 70.3% over the fully trained state of the art.",
       "selected": true,
-      "image": "assets/images/1.png",
+      "image": "assets/images/1.jpg",
       "links": [
         {
           "label": "arXiv",
@@ -99,7 +99,7 @@
       "area": "Vision-Language Navigation",
       "abstract": "The first multimodal LLM-powered self-evolving VLN framework, which keeps evolving during testing through hierarchical memory, retrieval-augmented reasoning, and reflection. It achieves 57% and 35.2% success rates in unseen environments on R2R and REVERSE, surpassing current state-of-the-art methods.",
       "selected": true,
-      "image": "assets/images/2.png",
+      "image": "assets/images/2.jpg",
       "links": [
         {
           "label": "arXiv",
@@ -113,46 +113,6 @@
       "note": "The preprint was first released in 2025. This page lists it under 2026 based on the conference information on the school website."
     },
     {
-      "id": "transcending-adversarial-perturbations-manifold",
-      "year": "2024",
-      "title": "Transcending Adversarial Perturbations: Manifold-Aided Adversarial Examples with Legitimate Semantics",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shuai Li et al.",
-      "venue": "arXiv preprint, 2024 · arXiv:2402.03095",
-      "area": "Adversarial Robustness",
-      "abstract": "A manifold-based adversarial example framework that generates realistic semantic variations instead of adding imperceptible pixel perturbations. It learns continuous transitions from legitimate images to adversarial examples through a supervised semantic-transformation model. Experiments on handwritten digits and industrial defects demonstrate improved visual quality, attack transferability, and explanations of neural network vulnerabilities.",
-      "selected": true,
-      "image": "assets/images/Transcending-Adversarial-Perturbations-Manifold-Aided-Adversarial-Examples-with-Legitimate-Semantics.png",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2402.03095"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "dynamic-perturbation-adaptive-adversarial-traini",
-      "year": "2024",
-      "title": "Dynamic Perturbation-Adaptive Adversarial Training on Medical Image Classification",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shuai Li et al.",
-      "venue": "arXiv preprint, 2024 · arXiv:2403.06798",
-      "area": "Medical Imaging",
-      "abstract": "A dynamic adversarial training method that adapts perturbation strengths using continuously updated loss information. It improves model robustness while preserving generalization, addressing the limitations of fixed perturbation budgets and external threshold transfer. Experiments on the HAM10000 skin lesion dataset show stronger robustness, classification precision, and interpretability across different convolutional networks.",
-      "selected": true,
-      "image": "assets/images/Dynamic-Perturbation-Adaptive-Adversarial-Training-on-Medical-Image-Classification.png",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2403.06798"
-        }
-      ],
-      "note": ""
-    },
-    {
       "id": "mean-flow-based-one-step-vision-language-action",
       "year": "2026",
       "title": "Mean-Flow based One-Step Vision-Language-Action",
@@ -163,7 +123,7 @@
       "area": "Vision-Language-Action",
       "abstract": "A one-step vision-language-action framework that replaces iterative flow-matching inference with a mean denoising vector field. Conditioned on multimodal features, it directly generates action chunks while reducing sampling latency and avoiding conventional consistency constraints. Real-world manipulation experiments report action generation 8.7 times faster than SmolVLA and 83.9 times faster than Diffusion Policy.",
       "selected": true,
-      "image": "assets/images/Mean-Flow-based-One-Step-Vision-Language-Action.png",
+      "image": "assets/images/Mean-Flow-based-One-Step-Vision-Language-Action.jpg",
       "links": [
         {
           "label": "arXiv",
@@ -183,7 +143,7 @@
       "area": "UAV Vision",
       "abstract": "A hierarchical framework for describing scene changes in UAV image pairs captured from moving viewpoints. It combines adaptive spatial layout modeling with cross-modal orientation calibration to distinguish overlapping and non-overlapping regions and capture directional changes. A newly constructed UAV-SCC benchmark supports evaluation, where the method achieves state-of-the-art captioning performance.",
       "selected": true,
-      "image": "assets/images/Hierarchical-Dual-Change-Collaborative-Learning-for-UAV-Scene-Change-Captioning.png",
+      "image": "assets/images/Hierarchical-Dual-Change-Collaborative-Learning-for-UAV-Scene-Change-Captioning.jpg",
       "links": [
         {
           "label": "arXiv",
@@ -203,51 +163,11 @@
       "area": "Humanoid Motion",
       "abstract": "A unified framework connecting text-driven robot-native motion generation with general humanoid motion tracking. Physics-guided prefixes improve physical feasibility, while a curriculum-trained mixture-of-experts controller supports robust execution. Offline and real-robot experiments demonstrate stable tracking of agile, difficult whole-body motions, reducing the mismatch between generated trajectories and physical robot capabilities.",
       "selected": true,
-      "image": "assets/images/PhyGile-Physics-Prefix-Guided-Motion-Generation-for-Agile-General-Humanoid-Motion-Tracking.png",
+      "image": "assets/images/PhyGile-Physics-Prefix-Guided-Motion-Generation-for-Agile-General-Humanoid-Motion-Tracking.jpg",
       "links": [
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2603.19305"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "frefusion-frequency-domain-transformer-for-infra",
-      "year": "2025",
-      "title": "Frefusion: Frequency Domain Transformer for Infrared and Visible Image Fusion",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Junjie Shi et al.",
-      "venue": "IEEE Transactions on Multimedia, 2025 (accepted author manuscript) · DOI:10.1109/TMM.2025.3543019",
-      "area": "Image Fusion",
-      "abstract": "A frequency-domain transformer framework for infrared and visible image fusion. It extracts source-image features in the frequency domain, combines them through transformer-based fusion, and reconstructs the fused output with a residual module. Experiments on MSRS, TNO, and Roadscene demonstrate superior fusion quality over several state-of-the-art methods across diverse scenes.",
-      "selected": true,
-      "image": "assets/images/Frefusion-Frequency-Domain-Transformer-for-Infrared-and-Visible-Image-Fusion.png",
-      "links": [
-        {
-          "label": "DOI",
-          "url": "https://doi.org/10.1109/TMM.2025.3543019"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "jointly-optimize-throughput-and-localization-acc",
-      "year": "2024",
-      "title": "Jointly Optimize Throughput and Localization Accuracy: UAV Trajectory Design for Multiuser Integrated Communication and Sensing",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Siyan Gu et al.",
-      "venue": "IEEE Internet of Things Journal, 2024 · DOI:10.1109/JIOT.2024.3444901",
-      "area": "UAV Communications",
-      "abstract": "A UAV trajectory optimization framework balancing multiuser communication throughput and target localization accuracy. It combines traveling-salesman-based trajectory initialization, path discretization, and successive convex approximation, with trajectory updates during flight. Numerical experiments demonstrate improved communication–sensing tradeoffs under communication-centric, sensing-centric, and balanced objectives while accounting for energy constraints and user association.",
-      "selected": true,
-      "image": "assets/images/Jointly-Optimize-Throughput-and-Localization-Accuracy-UAV-Trajectory-Design-for-Multiuser-Integrated-Communication-and-Sensing.png",
-      "links": [
-        {
-          "label": "DOI",
-          "url": "https://doi.org/10.1109/JIOT.2024.3444901"
         }
       ],
       "note": ""
@@ -263,7 +183,7 @@
       "area": "Embodied Intelligence Survey",
       "abstract": "A survey of embodied intelligent robots powered by large-scale multimodal models. It reviews the evolution of embodied robotics and explains how multimodal models enhance perception, reasoning, execution, and collaboration. The survey organizes representative research around practical robotic requirements and identifies challenges and future directions for adaptable robots in complex environments.",
       "selected": true,
-      "image": "assets/images/Large-scale-multimodal-model-based-embodied-intelligent-robots-A-survey.png",
+      "image": "assets/images/Large-scale-multimodal-model-based-embodied-intelligent-robots-A-survey.jpg",
       "links": [
         {
           "label": "DOI",
@@ -283,8 +203,143 @@
       "area": "Vision-Language Navigation",
       "abstract": "A lightweight zero-shot navigation framework that addresses redundant inputs, noisy progress estimation, and entangled action decisions. Using RGB observations and a Qwen3-VL-8B backbone, it supports continuous-environment navigation without task-specific training, graph search, or waypoint predictors. Experiments demonstrate performance competitive with GPT-4o while using a substantially smaller open-source vision-language model.",
       "selected": true,
-      "image": "assets/images/LightZeroNav-Zero-Shot-Vision-Language-Navigation-in-Continuous-Environments-Based-on-Lightweight-VLMs.png",
+      "image": "assets/images/LightZeroNav-Zero-Shot-Vision-Language-Navigation-in-Continuous-Environments-Based-on-Lightweight-VLMs.jpg",
       "links": [],
+      "note": ""
+    },
+    {
+      "id": "an-improved-barrier-neural-network-based-mutual",
+      "year": "2026",
+      "title": "An Improved Barrier Neural Network-Based Mutual Collision Avoidance Scheme for Dual Redundant Manipulators",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Lunan Zheng et al.",
+      "venue": "IEEE Transactions on Industrial Electronics, 2026 (early access) · DOI:10.1109/TIE.2026.3651383",
+      "area": "Motion Planning",
+      "abstract": "A collision avoidance scheme for dual redundant manipulators using an improved barrier neural network and an efficient critical-point search. It addresses iteration stopping near inequality boundaries while accelerating distance calculations. Simulations and real experiments show improved convergence, tracking precision, and safety margins, with theoretical results supporting the scheme’s equivalence and convergence.",
+      "selected": true,
+      "image": "assets/images/An-Improved-Barrier-Neural-Network-Based-Mutual-Collision-Avoidance-Scheme-for-Dual-Redundant-Manipulators.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/TIE.2026.3651383"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "closer-vln-closed-loop-self-verified-retrieval-a",
+      "year": "2026",
+      "title": "CLOSER-VLN: Closed-Loop Self-Verified Retrieval-Augmented Reasoning for Aerial Vision-Language Navigation",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shaoxuan Li et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2606.28397",
+      "area": "Aerial Navigation",
+      "abstract": "A closed-loop aerial navigation framework that verifies candidate actions before execution and retrieves relevant experiences only when verification fails. It integrates hierarchical reasoning, multidimensional action verification, and targeted multimodal retrieval to reduce accumulated trajectory errors. On CityNav test-unseen, it achieves a 32.01% success rate and 21.28% success weighted by path length.",
+      "selected": true,
+      "image": "assets/images/CLOSER-VLN-Closed-Loop-Self-Verified-Retrieval-Augmented-Reasoning-for-Aerial-Vision-Language-Navigation.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.28397"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "cmmr-vln-vision-and-language-navigation-via-cont",
+      "year": "2026",
+      "title": "CMMR-VLN: Vision-and-Language Navigation via Continual Multimodal Memory Retrieval",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Haozhou Li et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.07997",
+      "area": "Vision-Language Navigation",
+      "abstract": "A vision-and-language navigation framework that equips language-model agents with continual multimodal memory retrieval and reflection. Panoramic observations and landmarks index relevant experiences, while memory updates retain successful routes and key failure steps. Simulation and real-world tests show improved navigation success over NavGPT, MapGPT, and DiscussNav, particularly in unfamiliar and long-horizon scenarios.",
+      "selected": true,
+      "image": "assets/images/CMMR-VLN-Vision-and-Language-Navigation-via-Continual-Multimodal-Memory-Retrieval.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.07997"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "pm-nav-priori-map-guided-embodied-navigation-in",
+      "year": "2026",
+      "title": "PM-Nav: Priori-Map Guided Embodied Navigation in Functional Buildings",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Jiang Gao et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.09113",
+      "area": "Embodied Navigation",
+      "abstract": "A navigation framework for functional buildings that converts environmental maps into semantic prior maps. Hierarchical chain-of-thought prompting supports global route planning, while multiple models coordinate localization and action execution. Simulation and real-world evaluations on a custom building dataset show substantial improvements over SG-Nav and InstructNav in environments with visually similar spaces.",
+      "selected": true,
+      "image": "assets/images/PM-Nav-Priori-Map-Guided-Embodied-Navigation-in-Functional-Buildings.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.09113"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "sapoclip-a-self-adaptive-prompt-optimization-fra",
+      "year": "2026",
+      "title": "SAPOCLIP: A Self-Adaptive Prompt Optimization Framework for Industrial Anomaly Detection",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shuhan Yang et al.",
+      "venue": "Manuscript (publication venue and year not specified)",
+      "area": "Anomaly Detection",
+      "abstract": "A self-adaptive prompt optimization framework for CLIP-based industrial anomaly detection. It combines a main prompt template with learnable state-description parameters to improve textual representations of normal and abnormal conditions. Experiments demonstrate stronger anomaly classification and segmentation under one-, two-, and four-shot settings than competing few-shot methods on industrial benchmarks.",
+      "selected": true,
+      "image": "assets/images/SAPOCLIP-A-Self-Adaptive-Prompt-Optimization-Framework-for-Industrial-Anomaly-Detection.jpg",
+      "links": [],
+      "note": ""
+    },
+    {
+      "id": "tsf-il-multimodal-imitation-learning-with-tempor",
+      "year": "2026",
+      "title": "TSF-IL: Multimodal imitation learning with temporal-stage fusion",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Jianwei Tan et al.",
+      "venue": "Pattern Recognition Letters, 2026, 209, 223–229 · DOI:10.1016/j.patrec.2026.09.015",
+      "area": "Imitation Learning",
+      "abstract": "A multimodal imitation learning framework that combines visual observations with temporal progression and task-stage information. Global time-aware instruction fusion and stage-aware semantic guidance help distinguish similar observations during long tasks. Experiments achieve the best performance among compared simulation methods and a 40% success rate on long-horizon real-world tasks, versus 10% for the baseline.",
+      "selected": true,
+      "image": "assets/images/TSF-IL-Multimodal-imitation-learning-with-temporal-stage-fusion.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.patrec.2026.09.015"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "frefusion-frequency-domain-transformer-for-infra",
+      "year": "2025",
+      "title": "Frefusion: Frequency Domain Transformer for Infrared and Visible Image Fusion",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Junjie Shi et al.",
+      "venue": "IEEE Transactions on Multimedia, 2025 (accepted author manuscript) · DOI:10.1109/TMM.2025.3543019",
+      "area": "Image Fusion",
+      "abstract": "A frequency-domain transformer framework for infrared and visible image fusion. It extracts source-image features in the frequency domain, combines them through transformer-based fusion, and reconstructs the fused output with a residual module. Experiments on MSRS, TNO, and Roadscene demonstrate superior fusion quality over several state-of-the-art methods across diverse scenes.",
+      "selected": true,
+      "image": "assets/images/Frefusion-Frequency-Domain-Transformer-for-Infrared-and-Visible-Image-Fusion.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/TMM.2025.3543019"
+        }
+      ],
       "note": ""
     },
     {
@@ -298,7 +353,7 @@
       "area": "Hyperspectral Imaging",
       "abstract": "A hardware-aware framework for low-latency hyperspectral image classification. It combines latency-oriented neural architecture search with a computational efficiency model and split convolution to improve actual inference performance. Experiments on three datasets demonstrate faster inference and lower energy consumption than competing classification and lightweight networks, while maintaining comparable or better accuracy.",
       "selected": true,
-      "image": "assets/images/Low-Latency-Neural-Network-for-Efficient-Hyperspectral-Image-Classification.png",
+      "image": "assets/images/Low-Latency-Neural-Network-for-Efficient-Hyperspectral-Image-Classification.jpg",
       "links": [
         {
           "label": "DOI",
@@ -318,7 +373,7 @@
       "area": "SLAM Datasets",
       "abstract": "A multi-platform, multi-sensor dataset for evaluating SLAM in challenging real-world conditions. It contains 55 sequences collected with 21 sensors across five platforms, including handheld, ground, quadruped, car, and aerial systems. Benchmark evaluations expose limitations of existing SLAM methods under extreme lighting, aggressive motion, low texture, and high-speed driving.",
       "selected": true,
-      "image": "assets/images/M3DSS-A-Multi-platform-Multi-sensor-and-Multi-scenario-Dataset-for-SLAM-System.png",
+      "image": "assets/images/M3DSS-A-Multi-platform-Multi-sensor-and-Multi-scenario-Dataset-for-SLAM-System.jpg",
       "links": [
         {
           "label": "DOI",
@@ -342,7 +397,7 @@
       "area": "Motion Planning",
       "abstract": "A motion planning framework for safe cooperation between dual redundant manipulators. It introduces improved mutual collision avoidance constraints and a collaborative formulation, solved through a finite-time barrier neural network. Simulation and physical experiments show favorable safety margins, tracking accuracy, task success, and computational efficiency compared with alternative collision avoidance schemes.",
       "selected": true,
-      "image": "assets/images/Three-Time-Varying-Quadratic-Programming-Based-Mutual-Collision-Avoidance-Motion-Planning-Schemes-for-Dual-Redundant-Manipulators.png",
+      "image": "assets/images/Three-Time-Varying-Quadratic-Programming-Based-Mutual-Collision-Avoidance-Motion-Planning-Schemes-for-Dual-Redundant-Manipulators.jpg",
       "links": [],
       "note": ""
     },
@@ -357,7 +412,7 @@
       "area": "Person Re-identification",
       "abstract": "A unified generative framework that creates paired pedestrian images and descriptions in both directions for text-to-image person re-identification. CLIP-based encoders, mutual-conditional latent diffusion, and modality-specific decoders improve semantic alignment and augment training data. Experiments on three benchmarks demonstrate improved retrieval, including Rank-1 gains of 2.1 and 2.0 percentage points over IRRA and CADA.",
       "selected": true,
-      "image": "assets/images/Towards-unified-bijective-image-text-generation-for-text-to-image-person-re-identification.png",
+      "image": "assets/images/Towards-unified-bijective-image-text-generation-for-text-to-image-person-re-identification.jpg",
       "links": [
         {
           "label": "DOI",
@@ -377,91 +432,11 @@
       "area": "Medical Segmentation",
       "abstract": "A nuclei segmentation network combining multi-scale feature learning, multi-dimensional attention, and prior knowledge from the Segment Anything Model. Reverse erasing and cross-layer information flow recover missing details and improve ambiguous boundaries. Experiments demonstrate MIoU gains of 1.26 and 0.94 percentage points over competing methods on MoNuSeg and TNBC, respectively.",
       "selected": true,
-      "image": "assets/images/2MSPK-Net-A-nuclei-segmentation-network-based-on-multi-scale-multi-dimensional-attention-and-SAM-prior-knowledge.png",
+      "image": "assets/images/2MSPK-Net-A-nuclei-segmentation-network-based-on-multi-scale-multi-dimensional-attention-and-SAM-prior-knowledge.jpg",
       "links": [
         {
           "label": "DOI",
           "url": "https://doi.org/10.1016/j.bspc.2024.107140"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "a-hand-action-recognition-framework-based-on-mul",
-      "year": "2024",
-      "title": "A Hand Action Recognition Framework Based on Multimodal Foundation Model and Tracking of Skeleton Point Trajectorie",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Liang Wu et al.",
-      "venue": "IEEE International Conference on Cognitive Computing and Complex Data (ICCD), 2024 · DOI:10.1109/ICCD62811.2024.10843614",
-      "area": "Action Recognition",
-      "abstract": "A hand action recognition framework that transforms industrial video understanding into skeleton-point trajectory classification. By tracking sparse hand joints rather than learning full video representations, it reduces training-data requirements and supports real-time deployment. Experiments and deployment on Midea assembly lines demonstrate effective industrial action recognition with an accuracy of 98.8%.",
-      "selected": true,
-      "image": "assets/images/A-Hand-Action-Recognition-Framework-Based-on-Multimodal-Foundation-Model-and-Tracking-of-Skeleton-Point-Trajectorie.png",
-      "links": [
-        {
-          "label": "DOI",
-          "url": "https://doi.org/10.1109/ICCD62811.2024.10843614"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "an-improved-barrier-neural-network-based-mutual",
-      "year": "2026",
-      "title": "An Improved Barrier Neural Network-Based Mutual Collision Avoidance Scheme for Dual Redundant Manipulators",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Lunan Zheng et al.",
-      "venue": "IEEE Transactions on Industrial Electronics, 2026 (early access) · DOI:10.1109/TIE.2026.3651383",
-      "area": "Motion Planning",
-      "abstract": "A collision avoidance scheme for dual redundant manipulators using an improved barrier neural network and an efficient critical-point search. It addresses iteration stopping near inequality boundaries while accelerating distance calculations. Simulations and real experiments show improved convergence, tracking precision, and safety margins, with theoretical results supporting the scheme’s equivalence and convergence.",
-      "selected": true,
-      "image": "assets/images/An-Improved-Barrier-Neural-Network-Based-Mutual-Collision-Avoidance-Scheme-for-Dual-Redundant-Manipulators.png",
-      "links": [
-        {
-          "label": "DOI",
-          "url": "https://doi.org/10.1109/TIE.2026.3651383"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "closer-vln-closed-loop-self-verified-retrieval-a",
-      "year": "2026",
-      "title": "CLOSER-VLN: Closed-Loop Self-Verified Retrieval-Augmented Reasoning for Aerial Vision-Language Navigation",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shaoxuan Li et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2606.28397",
-      "area": "Aerial Navigation",
-      "abstract": "A closed-loop aerial navigation framework that verifies candidate actions before execution and retrieves relevant experiences only when verification fails. It integrates hierarchical reasoning, multidimensional action verification, and targeted multimodal retrieval to reduce accumulated trajectory errors. On CityNav test-unseen, it achieves a 32.01% success rate and 21.28% success weighted by path length.",
-      "selected": true,
-      "image": "assets/images/CLOSER-VLN-Closed-Loop-Self-Verified-Retrieval-Augmented-Reasoning-for-Aerial-Vision-Language-Navigation.png",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2606.28397"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "cmmr-vln-vision-and-language-navigation-via-cont",
-      "year": "2026",
-      "title": "CMMR-VLN: Vision-and-Language Navigation via Continual Multimodal Memory Retrieval",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Haozhou Li et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.07997",
-      "area": "Vision-Language Navigation",
-      "abstract": "A vision-and-language navigation framework that equips language-model agents with continual multimodal memory retrieval and reflection. Panoramic observations and landmarks index relevant experiences, while memory updates retain successful routes and key failure steps. Simulation and real-world tests show improved navigation success over NavGPT, MapGPT, and DiscussNav, particularly in unfamiliar and long-horizon scenarios.",
-      "selected": true,
-      "image": "assets/images/CMMR-VLN-Vision-and-Language-Navigation-via-Continual-Multimodal-Memory-Retrieval.png",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.07997"
         }
       ],
       "note": ""
@@ -477,7 +452,7 @@
       "area": "Imitation Learning",
       "abstract": "A behavior cloning method that combines historical observations and actions with geometric information about robot joints and end-effectors. These constraints reduce distribution-shift failures and strengthen temporal understanding for single-arm robots with limited views. Experiments report success-rate improvements of 31.5% in simulation and 48.4% in real-robot scenarios over compared methods.",
       "selected": true,
-      "image": "assets/images/Constrained-Behavior-Cloning-for-Robotic-Learning.png",
+      "image": "assets/images/Constrained-Behavior-Cloning-for-Robotic-Learning.jpg",
       "links": [
         {
           "label": "DOI",
@@ -497,7 +472,7 @@
       "area": "Fault Diagnosis",
       "abstract": "A harmonic drive fault diagnosis framework combining deep reinforcement learning with graph convolutional networks. Vibration signals are transformed into spatiotemporal graphs, while an agent selects graph-network structures and aggregation strategies. ChebGCN then classifies operating conditions and faults. Experiments on two datasets achieve diagnostic accuracies of 99.51% and 100%, respectively.",
       "selected": true,
-      "image": "assets/images/DRL-GCNet-A-Deep-Reinforcement-learning-and-Graph-Convolutional-Network-for-Harmonic-Drive-Fault-Diagnosis.png",
+      "image": "assets/images/DRL-GCNet-A-Deep-Reinforcement-learning-and-Graph-Convolutional-Network-for-Harmonic-Drive-Fault-Diagnosis.jpg",
       "links": [
         {
           "label": "DOI",
@@ -517,7 +492,7 @@
       "area": "Imitation Learning",
       "abstract": "A robotic imitation learning framework inspired by subconscious human behavior. It combines intent-aware trajectory sampling with cognitive hierarchical reasoning to retain essential actions and reduce unnecessary computation. Experiments on comprehensive bimanual tasks report execution speeds 100%–200% faster than compared state-of-the-art policies, while consistently achieving higher task success rates.",
       "selected": true,
-      "image": "assets/images/Subconscious-Robotic-Imitation-Learning.png",
+      "image": "assets/images/Subconscious-Robotic-Imitation-Learning.jpg",
       "links": [
         {
           "label": "DOI",
@@ -531,41 +506,6 @@
       "note": ""
     },
     {
-      "id": "pm-nav-priori-map-guided-embodied-navigation-in",
-      "year": "2026",
-      "title": "PM-Nav: Priori-Map Guided Embodied Navigation in Functional Buildings",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Jiang Gao et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.09113",
-      "area": "Embodied Navigation",
-      "abstract": "A navigation framework for functional buildings that converts environmental maps into semantic prior maps. Hierarchical chain-of-thought prompting supports global route planning, while multiple models coordinate localization and action execution. Simulation and real-world evaluations on a custom building dataset show substantial improvements over SG-Nav and InstructNav in environments with visually similar spaces.",
-      "selected": true,
-      "image": "assets/images/PM-Nav-Priori-Map-Guided-Embodied-Navigation-in-Functional-Buildings.png",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.09113"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "sapoclip-a-self-adaptive-prompt-optimization-fra",
-      "year": "2026",
-      "title": "SAPOCLIP: A Self-Adaptive Prompt Optimization Framework for Industrial Anomaly Detection",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shuhan Yang et al.",
-      "venue": "Manuscript (publication venue and year not specified)",
-      "area": "Anomaly Detection",
-      "abstract": "A self-adaptive prompt optimization framework for CLIP-based industrial anomaly detection. It combines a main prompt template with learnable state-description parameters to improve textual representations of normal and abnormal conditions. Experiments demonstrate stronger anomaly classification and segmentation under one-, two-, and four-shot settings than competing few-shot methods on industrial benchmarks.",
-      "selected": true,
-      "image": "assets/images/SAPOCLIP-A-Self-Adaptive-Prompt-Optimization-Framework-for-Industrial-Anomaly-Detection.png",
-      "links": [],
-      "note": ""
-    },
-    {
       "id": "spatiotemporal-feature-refinement-network-for-vi",
       "year": "2025",
       "title": "Spatiotemporal feature refinement network for video-based visible-infrared person re-identification",
@@ -576,11 +516,91 @@
       "area": "Person Re-identification",
       "abstract": "A video-based visible-infrared person re-identification network that jointly addresses modality differences and spatiotemporal feature extraction. It combines multiple ResNet50 branches, 3D cross-attention, and a deep spatiotemporal mining module with complementary losses. Experiments on benchmark datasets demonstrate effective identity matching across visible and infrared video sequences despite background interference and modality gaps.",
       "selected": true,
-      "image": "assets/images/Spatiotemporal-feature-refinement-network-for-video-based-visible-infrared-person-re-identification.png",
+      "image": "assets/images/Spatiotemporal-feature-refinement-network-for-video-based-visible-infrared-person-re-identification.jpg",
       "links": [
         {
           "label": "DOI",
           "url": "https://doi.org/10.1117/1.JEI.34.6.063011"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "transcending-adversarial-perturbations-manifold",
+      "year": "2024",
+      "title": "Transcending Adversarial Perturbations: Manifold-Aided Adversarial Examples with Legitimate Semantics",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shuai Li et al.",
+      "venue": "arXiv preprint, 2024 · arXiv:2402.03095",
+      "area": "Adversarial Robustness",
+      "abstract": "A manifold-based adversarial example framework that generates realistic semantic variations instead of adding imperceptible pixel perturbations. It learns continuous transitions from legitimate images to adversarial examples through a supervised semantic-transformation model. Experiments on handwritten digits and industrial defects demonstrate improved visual quality, attack transferability, and explanations of neural network vulnerabilities.",
+      "selected": true,
+      "image": "assets/images/Transcending-Adversarial-Perturbations-Manifold-Aided-Adversarial-Examples-with-Legitimate-Semantics.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.03095"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "dynamic-perturbation-adaptive-adversarial-traini",
+      "year": "2024",
+      "title": "Dynamic Perturbation-Adaptive Adversarial Training on Medical Image Classification",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shuai Li et al.",
+      "venue": "arXiv preprint, 2024 · arXiv:2403.06798",
+      "area": "Medical Imaging",
+      "abstract": "A dynamic adversarial training method that adapts perturbation strengths using continuously updated loss information. It improves model robustness while preserving generalization, addressing the limitations of fixed perturbation budgets and external threshold transfer. Experiments on the HAM10000 skin lesion dataset show stronger robustness, classification precision, and interpretability across different convolutional networks.",
+      "selected": true,
+      "image": "assets/images/Dynamic-Perturbation-Adaptive-Adversarial-Training-on-Medical-Image-Classification.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.06798"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "jointly-optimize-throughput-and-localization-acc",
+      "year": "2024",
+      "title": "Jointly Optimize Throughput and Localization Accuracy: UAV Trajectory Design for Multiuser Integrated Communication and Sensing",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Siyan Gu et al.",
+      "venue": "IEEE Internet of Things Journal, 2024 · DOI:10.1109/JIOT.2024.3444901",
+      "area": "UAV Communications",
+      "abstract": "A UAV trajectory optimization framework balancing multiuser communication throughput and target localization accuracy. It combines traveling-salesman-based trajectory initialization, path discretization, and successive convex approximation, with trajectory updates during flight. Numerical experiments demonstrate improved communication–sensing tradeoffs under communication-centric, sensing-centric, and balanced objectives while accounting for energy constraints and user association.",
+      "selected": true,
+      "image": "assets/images/Jointly-Optimize-Throughput-and-Localization-Accuracy-UAV-Trajectory-Design-for-Multiuser-Integrated-Communication-and-Sensing.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/JIOT.2024.3444901"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "a-hand-action-recognition-framework-based-on-mul",
+      "year": "2024",
+      "title": "A Hand Action Recognition Framework Based on Multimodal Foundation Model and Tracking of Skeleton Point Trajectorie",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Liang Wu et al.",
+      "venue": "IEEE International Conference on Cognitive Computing and Complex Data (ICCD), 2024 · DOI:10.1109/ICCD62811.2024.10843614",
+      "area": "Action Recognition",
+      "abstract": "A hand action recognition framework that transforms industrial video understanding into skeleton-point trajectory classification. By tracking sparse hand joints rather than learning full video representations, it reduces training-data requirements and supports real-time deployment. Experiments and deployment on Midea assembly lines demonstrate effective industrial action recognition with an accuracy of 98.8%.",
+      "selected": true,
+      "image": "assets/images/A-Hand-Action-Recognition-Framework-Based-on-Multimodal-Foundation-Model-and-Tracking-of-Skeleton-Point-Trajectorie.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/ICCD62811.2024.10843614"
         }
       ],
       "note": ""
@@ -596,31 +616,11 @@
       "area": "Battery Prognosis",
       "abstract": "A transformer-based domain adaptation method for predicting lithium-ion battery state of health. Self-attention extracts temporal features, while maximum mean discrepancy aligns source and target battery domains before prediction. Experiments on two CALCE battery datasets demonstrate lower prediction errors than competing methods, supporting battery prognosis across different battery types or operating environments.",
       "selected": true,
-      "image": "assets/images/TDDAM-transformer-based-deep-domain-adaptation-methodology-for-lithium-ion-battery-prognosis.png",
+      "image": "assets/images/TDDAM-transformer-based-deep-domain-adaptation-methodology-for-lithium-ion-battery-prognosis.jpg",
       "links": [
         {
           "label": "DOI",
           "url": "https://doi.org/10.1088/2631-8695/ad62b2"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "tsf-il-multimodal-imitation-learning-with-tempor",
-      "year": "2026",
-      "title": "TSF-IL: Multimodal imitation learning with temporal-stage fusion",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Jianwei Tan et al.",
-      "venue": "Pattern Recognition Letters, 2026, 209, 223–229 · DOI:10.1016/j.patrec.2026.09.015",
-      "area": "Imitation Learning",
-      "abstract": "A multimodal imitation learning framework that combines visual observations with temporal progression and task-stage information. Global time-aware instruction fusion and stage-aware semantic guidance help distinguish similar observations during long tasks. Experiments achieve the best performance among compared simulation methods and a 40% success rate on long-horizon real-world tasks, versus 10% for the baseline.",
-      "selected": true,
-      "image": "assets/images/TSF-IL-Multimodal-imitation-learning-with-temporal-stage-fusion.png",
-      "links": [
-        {
-          "label": "DOI",
-          "url": "https://doi.org/10.1016/j.patrec.2026.09.015"
         }
       ],
       "note": ""
@@ -640,7 +640,7 @@
             "englishName": "Zhicheng Wang",
             "role": "Computer Vision and Machine Learning",
             "initials": "ZW",
-            "photo": "assets/images/editor-bdc66857-ddd8-4062-9493-ec5beb455120.png",
+            "photo": "assets/images/editor-bdc66857-ddd8-4062-9493-ec5beb455120.jpg",
             "url": "https://orcid.org/0000-0001-7113-731X"
           },
           {
@@ -648,7 +648,7 @@
             "englishName": "Jianwei Tan",
             "role": "Imitation Learning and Embodied Agents",
             "initials": "JT",
-            "photo": "assets/images/editor-88b2446a-3a05-4dc2-8cd1-8538953b3ae9.png",
+            "photo": "assets/images/editor-88b2446a-3a05-4dc2-8cd1-8538953b3ae9.jpg",
             "url": "https://orcid.org/0009-0004-9374-2552"
           },
           {
@@ -664,7 +664,7 @@
             "englishName": "Xiangyu Dong",
             "role": "Embodied Agents",
             "initials": "XD",
-            "photo": "assets/images/editor-93c83e4a-085e-4c63-be55-2a034d5f8b83.png",
+            "photo": "assets/images/editor-93c83e4a-085e-4c63-be55-2a034d5f8b83.jpg",
             "url": "https://xiangyudongai.github.io/"
           }
         ]
