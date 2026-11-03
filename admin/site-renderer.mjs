@@ -48,7 +48,6 @@ function publication(paper) {
   const venue = hasYear ? paper.venue : [paper.venue, paper.year].filter(Boolean).join(', ');
   return `<li class="publication" id="${escape(paper.id)}">${escape(sentence(paper.authors))} ${linkedTitle} <cite>${escape(sentence(venue))}</cite>${example}</li>`;
 }
-const publicationList = papers => papers.length ? `<ol class="publication-list">${papers.map(publication).join('')}</ol>` : '<p class="empty">No publications listed.</p>';
 const publicationCard = paper => {
   const resources = paper.links.filter(item => safeUrl(item.url));
   const resource = resources.find(item => /^(pdf|doi|arxiv|paper|publication record|introduction)$/i.test(item.label)) || resources[0];
@@ -103,11 +102,8 @@ const homeContent = `<section class="page-section intro${site.imagePortrait ? ' 
   <div class="intro-copy">${home.eyebrow ? `<p class="eyebrow">${escape(home.eyebrow)}</p>` : ''}<h1 id="intro-title">${escape(home.heading)}</h1>${home.paragraphs.map((p, index) => `<p${index === 0 ? ' class="intro-lead"' : ''}>${escape(p)}</p>`).join('')}<div class="recruit-note"><p>${escape(home.recruitment)}</p></div></div>
   <figure class="lab-figure"><img class="lab-photo${site.imagePortrait ? ' portrait-photo' : ''}" src="${escape(relativeAsset(site.image))}" alt="${escape(site.imageAlt)}" width="${Number(site.imageWidth) || 800}" height="${Number(site.imageHeight) || 600}" fetchpriority="high"><figcaption><span class="photo-caption">${escape(site.imageCaption).replaceAll(' · ', '<br>')}</span>${safeUrl(site.imageSource) ? `<a class="photo-credit" href="${escape(site.imageSource)}" target="_blank" rel="noopener noreferrer">Faculty directory</a>` : ''}</figcaption></figure>
 </section>
-<section class="section" id="selected-publications" aria-label="Selected Publications">${sectionTitle('Selected publications', '<a href="#publications">All publications</a>')}${publicationCards}</section>
+<section class="section" id="publications" aria-label="Publications">${sectionTitle('Publications')}${publicationCards}</section>
 <section class="section" id="news" aria-label="News">${sectionTitle('News')}<ul class="news-list">${news.map(item => `<li><time datetime="${escape(item.date.replaceAll('.', '-'))}">${escape(item.date)}</time><p>${safeUrl(item.url) ? `<a href="${escape(item.url)}" target="_blank" rel="noopener noreferrer">${escape(item.text)}</a>` : escape(item.text)}</p></li>`).join('')}</ul></section>`;
-
-const sortedPublications = [...publications].sort((a, b) => Number(b.year) - Number(a.year));
-const publicationsContent = `<section class="page-section" id="publications" aria-labelledby="publications-title">${pageHeading('publications', 'Publications', '')}${publicationList(sortedPublications)}${projects.length ? `<section class="section" id="projects">${sectionTitle('Research projects')}<div class="project-list">${projects.map(project => `<article><p class="project-period">${escape(project.period)}</p><div><h3>${escape(project.title)}</h3><p>${escape(project.funding)} · ${escape(project.role)} · ${escape(project.amount)}</p></div></article>`).join('')}</div>${links([{ label: 'Project details on the faculty profile', url: site.sourceUrl }])}</section>` : ''}</section>`;
 
 const timeline = (items = []) => `<ol class="timeline">${items.map(item => `<li><span>${escape(item.period)}</span><div><strong>${escape(item.institution)}</strong><p>${escape(item.detail)}</p></div></li>`).join('')}</ol>`;
 const teacherProfile = person => `<article class="teacher">
@@ -128,7 +124,7 @@ const contactContent = `<section class="page-section" id="contact" aria-labelled
 const alumniContent = `<section class="page-section" id="alumni" aria-labelledby="alumni-title">` + pageHeading('alumni', 'Alumni', '') + `<p class="empty">${escape(alumni.intro || 'Alumni information will be added soon.')}</p></section>`;
 
 // Formerly separate pages, now sections of one page reached by the header anchors.
-const pageContent = homeContent + publicationsContent + teamContent + joinContent + contactContent + alumniContent;
+const pageContent = homeContent + teamContent + joinContent + contactContent + alumniContent;
 // Keep literal HTML whitespace identical for the published page and previews.
 return { 'index.html': layout(pageContent) };
 }
