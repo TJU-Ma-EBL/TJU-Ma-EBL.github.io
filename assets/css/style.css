@@ -144,7 +144,7 @@ b, i, strong, em, p, span, img, h1, h2, h3, header, a, tr, td {
 .navigation a {
   display: block;
   color: var(--gray);
-  font-size: 0.875em;
+  font-size: 1em;
   line-height: 1.6;
 }
 .navigation a:hover { color: #5b6166; text-decoration: none; }
@@ -521,7 +521,7 @@ img.avatar {
   .publication-card { grid-template-columns: 1fr; gap: 1em; }
   .card-figure { max-width: 340px; }
   .navigation { column-gap: 1.1em; row-gap: 2px; }
-  .navigation a { font-size: 0.8125em; }
+  .navigation a { font-size: 0.875em; }
   .intro-portrait .lab-figure { width: 140px; }
   .page-home .intro h1 { font-size: 1.4em; }
   .section-heading h2 { font-size: 1.05em; }
