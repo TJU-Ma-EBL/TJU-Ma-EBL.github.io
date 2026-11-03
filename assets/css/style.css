@@ -275,7 +275,16 @@ figcaption {
 .inline-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; font-size: 0.8125em; }
 
 /* Selected publications: figure cards like a paper overview */
-.publication-cards { display: grid; gap: 2.25em; }
+.publication-cards {
+  display: grid;
+  gap: 2.25em;
+  max-height: 620px;
+  overflow-y: auto;
+  padding: 1em 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  scrollbar-gutter: stable;
+}
 .publication-card {
   display: grid;
   grid-template-columns: minmax(180px, 300px) minmax(0, 1fr);
