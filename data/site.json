@@ -769,5 +769,14 @@
     "visit": "Before visiting, please email to confirm the campus, building, and meeting time.",
     "directions": "University and school websites:"
   },
-  "projects": []
+  "projects": [],
+  "resources": {
+    "heading": "Course & Accounts",
+    "intro": "",
+    "links": [
+      { "label": "Course webpage", "url": "https://zyc-tju-ai.github.io/EI-TJU/#" },
+      { "label": "Xiaohongshu", "url": "https://xhslink.cn/o/tpVY55kdc" },
+      { "label": "Bilibili", "url": "https://b23.tv/6r42IAN" }
+    ]
+  }
 }

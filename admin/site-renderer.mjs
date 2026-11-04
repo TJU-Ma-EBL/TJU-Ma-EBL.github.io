@@ -7,7 +7,7 @@
  */
 export function renderWebsite(data, { imageUrl } = {}) {
 if (imageUrl !== undefined && typeof imageUrl !== 'function') throw new TypeError('imageUrl must be a function.');
-const { site, home, research, news, publications, team, join, contact, projects = [], alumni = {} } = data;
+const { site, home, research, news, publications, team, join, contact, projects = [], resources = {}, alumni = {} } = data;
 const escape = (value = '') => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const safeUrl = value => /^(https?:\/\/|mailto:|\.\/|assets\/|#)/i.test(value || '') ? value : '';
 const relativeAsset = value => {
@@ -60,7 +60,7 @@ const publicationCard = paper => {
 const selectedPublications = publications.filter(p => p.selected);
 const publicationCards = selectedPublications.length ? `<div class="publication-cards">${selectedPublications.map(publicationCard).join('')}</div>` : '<p class="empty">No publications listed.</p>';
 
-const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni'] ];
+const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#resources', 'Course & Accounts'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni'] ];
 const year = site.updated.slice(0, 4);
 function layout(content) {
   const favicon = 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="4" fill="#174b7a"/><text x="24" y="32" fill="white" text-anchor="middle" font-family="Georgia,serif" font-size="25">${escape(site.mark)}</text></svg>`);
@@ -123,8 +123,10 @@ const contactContent = `<section class="page-section" id="contact" aria-labelled
 
 const alumniContent = `<section class="page-section" id="alumni" aria-labelledby="alumni-title">` + pageHeading('alumni', 'Alumni', '') + `<p class="empty">${escape(alumni.intro || 'Alumni information will be added soon.')}</p></section>`;
 
+const resourcesContent = resources.links?.length ? `<section class="page-section" id="resources" aria-labelledby="resources-title">` + pageHeading('resources', resources.heading || 'Course & Accounts', resources.intro) + links(resources.links) + `</section>` : '';
+
 // Formerly separate pages, now sections of one page reached by the header anchors.
-const pageContent = homeContent + teamContent + joinContent + contactContent + alumniContent;
+const pageContent = homeContent + teamContent + resourcesContent + joinContent + contactContent + alumniContent;
 // Keep literal HTML whitespace identical for the published page and previews.
 return { 'index.html': layout(pageContent) };
 }
