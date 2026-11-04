@@ -99,7 +99,7 @@ function layout(content) {
 }
 
 const homeContent = `<section class="page-section intro${site.imagePortrait ? ' intro-portrait' : ''}" id="home" aria-labelledby="intro-title">
-  <div class="intro-copy">${home.eyebrow ? `<p class="eyebrow">${escape(home.eyebrow)}</p>` : ''}<h1 id="intro-title">${escape(home.heading)}</h1>${home.paragraphs.map((p, index) => `<p${index === 0 ? ' class="intro-lead"' : ''}>${escape(p)}</p>`).join('')}<div class="recruit-note"><p>${escape(home.recruitment)}</p></div></div>
+  <div class="intro-copy">${home.eyebrow ? `<p class="eyebrow">${escape(home.eyebrow)}</p>` : ''}<h1 id="intro-title">${escape(home.heading)}</h1>${home.paragraphs.map((p, index) => `<p${index === 0 ? ' class="intro-lead"' : ''}>${escape(p)}</p>`).join('')}</div>
   <figure class="lab-figure"><img class="lab-photo${site.imagePortrait ? ' portrait-photo' : ''}" src="${escape(relativeAsset(site.image))}" alt="${escape(site.imageAlt)}" width="${Number(site.imageWidth) || 800}" height="${Number(site.imageHeight) || 600}" fetchpriority="high"><figcaption><span class="photo-caption">${escape(site.imageCaption).replaceAll(' · ', '<br>')}</span>${safeUrl(site.imageSource) ? `<a class="photo-credit" href="${escape(site.imageSource)}" target="_blank" rel="noopener noreferrer">Faculty directory</a>` : ''}</figcaption></figure>
 </section>
 <section class="section" id="publications" aria-label="Publications">${sectionTitle('Publications')}${publicationCards}</section>
