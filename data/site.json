@@ -666,6 +666,13 @@
             "initials": "XD",
             "photo": "assets/images/editor-93c83e4a-085e-4c63-be55-2a034d5f8b83.jpg",
             "url": "https://xiangyudongai.github.io/"
+          },
+          {
+            "name": "Kairong Tu",
+            "englishName": "Kairong Tu",
+            "role": "Embodied Agents, Runtime Assurance, and Continual Reliability",
+            "initials": "TK",
+            "photo": "assets/images/tukairong.jpg"
           }
         ]
       },
@@ -674,7 +681,25 @@
         "title": "Master's Students",
         "english": "",
         "emptyMessage": "Profiles to be added.",
-        "members": []
+        "members": [
+          {
+            "name": "Jun Xie",
+            "englishName": "Jun Xie",
+            "role": "Robot Manipulation",
+            "initials": "JX",
+            "photo": "assets/images/xiejun.jpg",
+            "links": [
+              {
+                "label": "Xiaohongshu",
+                "url": "https://xhslink.cn/o/tpVY55kdc"
+              },
+              {
+                "label": "Bilibili",
+                "url": "https://b23.tv/6r42IAN"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "interns",
@@ -771,12 +796,10 @@
   },
   "projects": [],
   "resources": {
-    "heading": "Course & Accounts",
+    "heading": "Teaching",
     "intro": "",
     "links": [
-      { "label": "Course webpage", "url": "https://zyc-tju-ai.github.io/EI-TJU/#" },
-      { "label": "Xiaohongshu", "url": "https://xhslink.cn/o/tpVY55kdc" },
-      { "label": "Bilibili", "url": "https://b23.tv/6r42IAN" }
+      { "label": "Embodied Intelligence Practicum", "url": "https://zyc-tju-ai.github.io/EI-TJU/#" }
     ]
   }
 }

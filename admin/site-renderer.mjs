@@ -60,7 +60,7 @@ const publicationCard = paper => {
 const selectedPublications = publications.filter(p => p.selected);
 const publicationCards = selectedPublications.length ? `<div class="publication-cards">${selectedPublications.map(publicationCard).join('')}</div>` : '<p class="empty">No publications listed.</p>';
 
-const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#resources', 'Course & Accounts'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni'] ];
+const nav = [ ['#home', 'Home'], ['#publications', 'Publications'], ['#people', 'People'], ['#resources', 'Teaching'], ['#join', 'Join Us'], ['#contact', 'Contact'], ['#alumni', 'Alumni'] ];
 const year = site.updated.slice(0, 4);
 function layout(content) {
   const favicon = 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="4" fill="#174b7a"/><text x="24" y="32" fill="white" text-anchor="middle" font-family="Georgia,serif" font-size="25">${escape(site.mark)}</text></svg>`);
@@ -110,7 +110,7 @@ const teacherProfile = person => `<article class="teacher">
   <div class="lead-profile">${avatar(person, true)}<div><h3>${escape(person.name)}${example}</h3>${person.englishName && person.englishName !== person.name ? `<p class="person-english">${escape(person.englishName)}</p>` : ''}<p class="person-role">${escape(person.role)}</p><p class="bio">${escape(person.bio)}</p>${links(person.links)}</div></div>
   ${person.experience?.length || person.education?.length ? `<details class="faculty-history"><summary>Education and experience</summary>${person.experience?.length ? `<div class="history-section"><h4>Experience</h4>${timeline(person.experience)}</div>` : ''}${person.education?.length ? `<div class="history-section"><h4>Education</h4>${timeline(person.education)}</div>` : ''}</details>` : ''}
 </article>`;
-const memberCard = person => `<article class="member">${avatar(person)}<div><h3>${safeUrl(person.url) ? `<a href="${escape(person.url)}" target="_blank" rel="noopener noreferrer">${escape(person.name)}</a>` : escape(person.name)}</h3>${person.englishName && person.englishName !== person.name ? `<p class="person-english">${escape(person.englishName)}</p>` : ''}<p class="person-role">${escape(person.role)}</p></div></article>`;
+const memberCard = person => `<article class="member">${avatar(person)}<div><h3>${safeUrl(person.url) ? `<a href="${escape(person.url)}" target="_blank" rel="noopener noreferrer">${escape(person.name)}</a>` : escape(person.name)}</h3>${person.englishName && person.englishName !== person.name ? `<p class="person-english">${escape(person.englishName)}</p>` : ''}<p class="person-role">${escape(person.role)}</p>${links(person.links)}</div></article>`;
 const teamContent = `<section class="page-section" id="people" aria-labelledby="people-title">`
   + pageHeading('people', 'People', team.intro)
   + `<section class="team-group" id="faculty">${sectionTitle('Faculty')}${team.teachers.map(teacherProfile).join('')}</section>`
