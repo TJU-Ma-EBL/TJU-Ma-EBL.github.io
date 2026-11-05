@@ -358,7 +358,7 @@ img.avatar {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);
   gap: 1.25em;
-  align-items: start;
+  align-items: center;
 }
 .member h3 { margin: 0; font-size: 1em; }
 .member h3 a { color: var(--text); text-decoration: underline; }

@@ -636,20 +636,19 @@
         "emptyMessage": "Profiles to be added.",
         "members": [
           {
-            "name": "Zhicheng Wang",
-            "englishName": "Zhicheng Wang",
-            "role": "Computer Vision and Machine Learning",
-            "initials": "ZW",
-            "photo": "assets/images/editor-bdc66857-ddd8-4062-9493-ec5beb455120.jpg",
-            "url": "https://orcid.org/0000-0001-7113-731X"
-          },
-          {
             "name": "Jianwei Tan",
             "englishName": "Jianwei Tan",
             "role": "Imitation Learning and Embodied Agents",
             "initials": "JT",
             "photo": "assets/images/editor-88b2446a-3a05-4dc2-8cd1-8538953b3ae9.jpg",
             "url": "https://orcid.org/0009-0004-9374-2552"
+          },
+          {
+            "name": "Kairong Tu",
+            "englishName": "Kairong Tu",
+            "role": "Embodied Agents, Runtime Assurance, and Continual Reliability",
+            "initials": "TK",
+            "photo": "assets/images/tukairong.jpg"
           },
           {
             "name": "Xiang Zhang",
@@ -668,11 +667,12 @@
             "url": "https://xiangyudongai.github.io/"
           },
           {
-            "name": "Kairong Tu",
-            "englishName": "Kairong Tu",
-            "role": "Embodied Agents, Runtime Assurance, and Continual Reliability",
-            "initials": "TK",
-            "photo": "assets/images/tukairong.jpg"
+            "name": "Zhicheng Wang",
+            "englishName": "Zhicheng Wang",
+            "role": "Computer Vision and Machine Learning",
+            "initials": "ZW",
+            "photo": "assets/images/editor-bdc66857-ddd8-4062-9493-ec5beb455120.jpg",
+            "url": "https://orcid.org/0000-0001-7113-731X"
           }
         ]
       },
@@ -683,9 +683,16 @@
         "emptyMessage": "Profiles to be added.",
         "members": [
           {
+            "name": "Jiahe Zhang",
+            "englishName": "Jiahe Zhang",
+            "role": "",
+            "initials": "JZ",
+            "photo": "assets/images/zhangjiahe-master.png"
+          },
+          {
             "name": "Jun Xie",
             "englishName": "Jun Xie",
-            "role": "Robot Manipulation",
+            "role": "",
             "initials": "JX",
             "photo": "assets/images/xiejun.jpg",
             "links": [
@@ -698,6 +705,27 @@
                 "url": "https://b23.tv/6r42IAN"
               }
             ]
+          },
+          {
+            "name": "Junliang Zhang",
+            "englishName": "Junliang Zhang",
+            "role": "",
+            "initials": "JL",
+            "photo": "assets/images/zhangjunliang-master.jpg"
+          },
+          {
+            "name": "Yihui Wang",
+            "englishName": "Yihui Wang",
+            "role": "",
+            "initials": "YW",
+            "photo": "assets/images/wangyihui-master.jpg"
+          },
+          {
+            "name": "Yuchen Zhang",
+            "englishName": "Yuchen Zhang",
+            "role": "",
+            "initials": "YZ",
+            "photo": "assets/images/zhangyuchen-master.png"
           }
         ]
       },
@@ -706,7 +734,29 @@
         "title": "Research Interns",
         "english": "",
         "emptyMessage": "Profiles to be added.",
-        "members": []
+        "members": [
+          {
+            "name": "He Sun",
+            "englishName": "He Sun",
+            "role": "",
+            "initials": "HS",
+            "photo": "assets/images/sunheInterns.jpg"
+          },
+          {
+            "name": "Xingyou Wan",
+            "englishName": "Xingyou Wan",
+            "role": "",
+            "initials": "XW",
+            "photo": "assets/images/wanxingyouInterns.jpg"
+          },
+          {
+            "name": "Xuanyu Lu",
+            "englishName": "Xuanyu Lu",
+            "role": "",
+            "initials": "XL",
+            "photo": "assets/images/luxuanyuInterns.jpg"
+          }
+        ]
       }
     ],
     "teachers": [
@@ -799,7 +849,10 @@
     "heading": "Teaching",
     "intro": "",
     "links": [
-      { "label": "Embodied Intelligence Practicum", "url": "https://zyc-tju-ai.github.io/EI-TJU/#" }
+      {
+        "label": "Embodied Intelligence Practicum",
+        "url": "https://zyc-tju-ai.github.io/EI-TJU/#"
+      }
     ]
   }
 }

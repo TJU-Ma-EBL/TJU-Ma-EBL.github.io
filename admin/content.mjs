@@ -29,7 +29,7 @@ export function validateContent(data, { knownAssets } = {}) {
   };
   const timeline = (value, name) => list(value, name).forEach((item, i) => fields(item, `${name} ${i+1}`, ['period', 'institution', 'detail'], ['period', 'institution', 'detail']));
   const person = (value, name, faculty = false) => {
-    const item = fields(value, name, ['name','englishName','role','initials','photo', ...(faculty ? ['bio'] : ['url'])], ['name','role']);
+    const item = fields(value, name, ['name','englishName','role','initials','photo', ...(faculty ? ['bio'] : ['url'])], faculty ? ['name','role'] : ['name']);
     photos(item.photo, `${name}: photo`);
     if (!item.photo && !item.initials) fail(`${name}: add a photo or initials.`);
     if (faculty) { links(item.links, `${name}: links`); timeline(item.experience, `${name}: experience`); timeline(item.education, `${name}: education`); }
