@@ -206,7 +206,7 @@ function defaultEntry(path, currentArray) {
   if (key === 'news') return { date: new Date().toLocaleDateString('en-CA').replaceAll('-', '.'), category: 'News', text: '', url: '' };
   if (key === 'publications') return { id: 'paper-' + crypto.randomUUID(), year: String(new Date().getFullYear()), title: '', englishTitle: '', titleLang: 'en', authors: '', venue: '', area: '', abstract: '', selected: false, links: [], note: '' };
   if (key === 'teachers') return { name: '', englishName: '', role: '', initials: '', photo: '', bio: '', links: [], experience: [], education: [] };
-  if (key === 'members') return { name: '', englishName: '', role: '', initials: '', photo: '', url: '' };
+  if (key === 'members') return { name: '', englishName: '', role: '', initials: '', photo: '', url: '', note: '' };
   if (['experience', 'education'].includes(key)) return { period: '', institution: '', detail: '' };
   if (key === 'positions') return { title: '', english: '', description: '', note: '' };
   if (key === 'projects') return { title: '', period: '', funding: '', role: '', amount: '' };

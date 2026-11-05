@@ -363,6 +363,7 @@ img.avatar {
 .member h3 { margin: 0; font-size: 1em; }
 .member h3 a { color: var(--text); text-decoration: underline; }
 .member .person-role { margin: 3px 0 0; font-size: 0.8125em; }
+.person-note { margin: 3px 0 0; color: var(--muted); font-size: 0.8125em; line-height: 1.5; }
 .team-group + .team-group { margin-top: 2em; }
 .group-empty { margin: 0; color: var(--muted); font-size: 0.875em; }
 .teacher + .teacher { margin-top: 2em; padding-top: 2em; border-top: 1px solid var(--border); }
