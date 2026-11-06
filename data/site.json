@@ -714,13 +714,6 @@
             ]
           },
           {
-            "name": "Keyao Xu",
-            "englishName": "Keyao Xu",
-            "role": "",
-            "initials": "KX",
-            "photo": "assets/images/people/xukeyao-master.jpg"
-          },
-          {
             "name": "Lili Liu",
             "englishName": "Lili Liu",
             "role": "",
@@ -733,7 +726,7 @@
             "role": "",
             "initials": "LL",
             "photo": "assets/images/people/lilinfeng-master.jpg",
-            "note": "Supervisor: Prof. Qinghua Hu"
+            "note": "Co-advised with Prof. Qinghua Hu"
           },
           {
             "name": "Runpeng Wang",
@@ -741,6 +734,13 @@
             "role": "",
             "initials": "RW",
             "photo": "assets/images/people/wangrunpeng-master.jpg"
+          },
+          {
+            "name": "Shaoxuan Li",
+            "englishName": "Shaoxuan Li",
+            "role": "",
+            "initials": "SL",
+            "photo": "assets/images/people/lishaoxuan-master.jpg"
           },
           {
             "name": "Wenjie Sun",
@@ -769,6 +769,14 @@
             "role": "",
             "initials": "YZ",
             "photo": "assets/images/people/zhangyuchen-master.png"
+          },
+          {
+            "name": "Zhou Zhou",
+            "englishName": "Zhou Zhou",
+            "role": "",
+            "initials": "ZZ",
+            "photo": "assets/images/people/zhouzhou-master.jpg",
+            "note": "Co-advised with Prof. Qinghua Hu"
           }
         ]
       },
@@ -791,6 +799,14 @@
             "role": "",
             "initials": "JL",
             "photo": "assets/images/people/zhangjunliang-interns.jpg"
+          },
+          {
+            "name": "Keyao Xu",
+            "englishName": "Keyao Xu",
+            "role": "",
+            "initials": "KX",
+            "photo": "assets/images/people/xukeyao-interns.jpg",
+            "url": "https://openreview.net/profile?id=~Keyao_Xu1"
           },
           {
             "name": "Lujia Qu",
@@ -909,6 +925,26 @@
       {
         "label": "Embodied Intelligence Practicum",
         "url": "https://zyc-tju-ai.github.io/EI-TJU/#"
+      }
+    ]
+  },
+  "alumni": {
+    "intro": "",
+    "members": [
+      {
+        "name": "Yi Luo",
+        "affiliation": "HKU",
+        "url": "https://arclab.hku.hk/LUO%20Yi.html"
+      },
+      {
+        "name": "Wensheng Liang",
+        "affiliation": "Huawei",
+        "url": "https://openreview.net/profile?id=~Wensheng_Liang1"
+      },
+      {
+        "name": "Shulei Huang",
+        "affiliation": "Huawei",
+        "url": "https://ieeexplore.ieee.org/author/37085801473"
       }
     ]
   }

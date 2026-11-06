@@ -33,7 +33,7 @@ const labels = {
   sourceUrl: 'Source URL', eyebrow: 'Small heading', heading: 'Main heading', paragraphs: 'Introduction paragraphs', recruitment: 'Recruitment message',
   number: 'Display number', title: 'Title', date: 'Date', category: 'Category', text: 'News text', id: 'Identifier', year: 'Publication year',
   authors: 'Authors', venue: 'Conference or journal', area: 'Research area', abstract: 'Research summary', selected: 'Feature on homepage', note: 'Additional note',
-  intro: 'Introduction', teachers: 'Faculty', groups: 'Student groups', emptyMessage: 'Message when no members are listed', members: 'Members',
+  intro: 'Introduction', teachers: 'Faculty', groups: 'Student groups', emptyMessage: 'Message when no members are listed', members: 'Members', alumni: 'Alumni', affiliation: 'Affiliation',
   role: 'Role or research focus', initials: 'Initials (used without a photo)', photo: 'Profile photo', bio: 'Biography', experience: 'Experience',
   education: 'Education', period: 'Period', detail: 'Details', positions: 'Open positions', application: 'Application steps', subject: 'Suggested email subject',
   cultureTitle: 'Recruitment section title', culture: 'Recruitment information', visit: 'Visiting instructions', directions: 'Official links introduction',
@@ -207,6 +207,7 @@ function defaultEntry(path, currentArray) {
   if (key === 'publications') return { id: 'paper-' + crypto.randomUUID(), year: String(new Date().getFullYear()), title: '', englishTitle: '', titleLang: 'en', authors: '', venue: '', area: '', abstract: '', selected: false, links: [], note: '' };
   if (key === 'teachers') return { name: '', englishName: '', role: '', initials: '', photo: '', bio: '', links: [], experience: [], education: [] };
   if (key === 'members') return { name: '', englishName: '', role: '', initials: '', photo: '', url: '', note: '' };
+  if (key === 'alumni') return { name: '', affiliation: '', url: '' };
   if (['experience', 'education'].includes(key)) return { period: '', institution: '', detail: '' };
   if (key === 'positions') return { title: '', english: '', description: '', note: '' };
   if (key === 'projects') return { title: '', period: '', funding: '', role: '', amount: '' };
