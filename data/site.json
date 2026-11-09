@@ -12,7 +12,7 @@
     "postalCode": "",
     "image": "assets/images/people/maxiaoguang-teacher.jpg",
     "imageAlt": "Professor Xiaoguang Ma's portrait from the faculty directory of Tianjin University's School of Artificial Intelligence",
-    "imageCaption": "Xiaoguang Ma · Peiyang Chair Professor",
+    "imageCaption": "Xiaoguang Ma · Peiyang Distinguished Professor",
     "links": [],
     "imagePortrait": true,
     "imageWidth": 300,
@@ -836,10 +836,10 @@
       {
         "name": "Xiaoguang Ma",
         "englishName": "Xiaoguang Ma",
-        "role": "Peiyang Chair Professor · School of Artificial Intelligence, Tianjin University",
+        "role": "Peiyang Distinguished Professor · School of Artificial Intelligence, Tianjin University",
         "initials": "XM",
         "photo": "assets/images/people/maxiaoguang-teacher.jpg",
-        "bio": "Xiaoguang Ma serves as a Peiyang Chair Professor at the School of Artificial Intelligence, Tianjin University, and is a Standing Committee Member of the CCF Technical Committee on Intelligent Robotics and of the CAAI Technical Committee on Human-Machine Integration. His research covers agent-driven Physical AI, AI4Engr, and unmanned systems.",
+        "bio": "Xiaoguang Ma serves as a Peiyang Distinguished Professor at the School of Artificial Intelligence, Tianjin University, and is a Standing Committee Member of the CCF Technical Committee on Intelligent Robotics and of the CAAI Technical Committee on Human-Machine Integration. His research covers agent-driven Physical AI, AI4Engr, and unmanned systems.",
         "links": [
           {
             "label": "Official Faculty Profile",
