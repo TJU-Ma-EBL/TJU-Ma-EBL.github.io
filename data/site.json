@@ -933,8 +933,21 @@
     "members": [
       {
         "name": "Yi Luo",
-        "affiliation": "HKU",
+        "affiliation": "HKU Ph.D. Candidate",
         "url": "https://arclab.hku.hk/LUO%20Yi.html"
+      },
+      {
+        "name": "Shulei Huang",
+        "affiliation": "Huawei",
+        "url": "https://ieeexplore.ieee.org/author/37085801473"
+      },
+      {
+        "name": "Haotian Zhang",
+        "affiliation": "BUAA Ph.D. Candidate"
+      },
+      {
+        "name": "Jing Lv",
+        "affiliation": "HNU Ph.D. Candidate"
       },
       {
         "name": "Wensheng Liang",
@@ -942,9 +955,56 @@
         "url": "https://openreview.net/profile?id=~Wensheng_Liang1"
       },
       {
-        "name": "Shulei Huang",
-        "affiliation": "Huawei",
-        "url": "https://ieeexplore.ieee.org/author/37085801473"
+        "name": "Xianwei Lv",
+        "affiliation": "BYD"
+      },
+      {
+        "name": "Liang Wu",
+        "affiliation": "Xiaomi"
+      },
+      {
+        "name": "Zhenrui Wu",
+        "affiliation": "AVIC"
+      },
+      {
+        "name": "Kang Xu",
+        "affiliation": "SiCARRIER"
+      },
+      {
+        "name": "Shuai Li",
+        "affiliation": "Haier COSMO"
+      },
+      {
+        "name": "Yan Li",
+        "affiliation": "Nordkai"
+      },
+      {
+        "name": "Shaowei Yang",
+        "affiliation": "BYD"
+      },
+      {
+        "name": "Gongtao Yue",
+        "affiliation": "NEU Ph.D. Candidate"
+      },
+      {
+        "name": "Qianqian Wang",
+        "affiliation": "HKUST Ph.D. Candidate"
+      },
+      {
+        "name": "Suqi Zhang",
+        "affiliation": "SPIC Intelligent Technology"
+      },
+      {
+        "name": "Shiyun Lin",
+        "affiliation": "Yum China"
+      },
+      {
+        "name": "Run Zou",
+        "affiliation": "GalaxySpace"
+      },
+      {
+        "name": "Debin Zeng",
+        "affiliation": "MojiWeather"
       }
     ]
   }

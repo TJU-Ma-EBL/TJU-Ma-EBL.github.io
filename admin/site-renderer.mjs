@@ -121,8 +121,8 @@ const joinContent = `<section class="page-section" id="join" aria-labelledby="jo
 
 const contactContent = `<section class="page-section" id="contact" aria-labelledby="contact-title">` + pageHeading('contact', 'Contact', contact.intro) + `<dl class="contact-list"><div><dt>Email</dt><dd>${email()}</dd></div></dl></section>`;
 
-const alumniCard = person => `<article class="alumni-member"><h3>${safeUrl(person.url) ? `<a href="${escape(person.url)}" target="_blank" rel="noopener noreferrer">${escape(person.name)}</a>` : escape(person.name)}</h3>${person.affiliation ? `<p class="alumni-affiliation">${escape(person.affiliation)}</p>` : ''}</article>`;
-const alumniContent = `<section class="page-section" id="alumni" aria-labelledby="alumni-title">` + pageHeading('alumni', 'Alumni', '') + (alumni.members?.length ? `<div class="alumni-list">${alumni.members.map(alumniCard).join('')}</div>` : `<p class="empty">${escape(alumni.intro || 'Alumni information will be added soon.')}</p>`) + `</section>`;
+const alumniRow = person => `<li class="alumni-item">${safeUrl(person.url) ? `<a href="${escape(person.url)}" target="_blank" rel="noopener noreferrer">${escape(person.name)}</a>` : `<span>${escape(person.name)}</span>`}${person.affiliation ? `<span class="alumni-affiliation">${escape(person.affiliation)}</span>` : ''}</li>`;
+const alumniContent = `<section class="page-section" id="alumni" aria-labelledby="alumni-title">` + pageHeading('alumni', 'Alumni', '') + (alumni.members?.length ? `<div class="alumni-scroll"><ul class="alumni-list">${alumni.members.map(alumniRow).join('')}</ul></div>` : `<p class="empty">${escape(alumni.intro || 'Alumni information will be added soon.')}</p>`) + `</section>`;
 
 const resourcesContent = resources.links?.length ? `<section class="page-section" id="resources" aria-labelledby="resources-title">` + pageHeading('resources', resources.heading || 'Course & Accounts', resources.intro) + links(resources.links) + `</section>` : '';
 

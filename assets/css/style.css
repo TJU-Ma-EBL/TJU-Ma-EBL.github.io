@@ -364,11 +364,11 @@ img.avatar {
 .member h3 a { color: var(--text); text-decoration: underline; }
 .member .person-role { margin: 3px 0 0; font-size: 0.8125em; }
 .person-note { margin: 3px 0 0; color: var(--muted); font-size: 0.8125em; line-height: 1.5; }
-.alumni-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5em; margin-bottom: 1em; }
-.alumni-member { display: flex; flex-direction: column; gap: 0.25em; }
-.alumni-member h3 { margin: 0; font-size: 1em; }
-.alumni-member h3 a { color: var(--text); text-decoration: underline; }
-.alumni-affiliation { margin: 0; color: var(--muted); font-size: 0.8125em; }
+.alumni-scroll { max-height: 12em; overflow-y: auto; margin-bottom: 1em; }
+.alumni-list { list-style: none; margin: 0; padding: 0; }
+.alumni-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6em; font-size: 0.9375em; line-height: 1.9; }
+.alumni-item a { color: var(--link); text-decoration: underline; }
+.alumni-affiliation { color: var(--muted); }
 .team-group + .team-group { margin-top: 2em; }
 .group-empty { margin: 0; color: var(--muted); font-size: 0.875em; }
 .teacher + .teacher { margin-top: 2em; padding-top: 2em; border-top: 1px solid var(--border); }
