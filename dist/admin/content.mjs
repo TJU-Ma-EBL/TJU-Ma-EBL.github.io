@@ -29,7 +29,7 @@ export function validateContent(data, { knownAssets } = {}) {
   };
   const timeline = (value, name) => list(value, name).forEach((item, i) => fields(item, `${name} ${i+1}`, ['period', 'institution', 'detail'], ['period', 'institution', 'detail']));
   const person = (value, name, faculty = false) => {
-    const item = fields(value, name, ['name','englishName','role','initials','photo', ...(faculty ? ['bio'] : ['url'])], ['name','role']);
+    const item = fields(value, name, ['name','englishName','role','initials','photo','note', ...(faculty ? ['bio'] : ['url'])], faculty ? ['name','role'] : ['name']);
     photos(item.photo, `${name}: photo`);
     if (!item.photo && !item.initials) fail(`${name}: add a photo or initials.`);
     if (faculty) { links(item.links, `${name}: links`); timeline(item.experience, `${name}: experience`); timeline(item.education, `${name}: education`); }
@@ -65,6 +65,8 @@ export function validateContent(data, { knownAssets } = {}) {
   list(join.positions, 'Open positions').forEach((p,i) => fields(p, `Position ${i+1}`, ['title','english','description','note'], ['title','description']));
   list(join.application, 'Application instructions').forEach((p,i) => text(p, `Application instruction ${i+1}`, true)); url(join.sourceUrl, 'Recruitment source');
   fields(data.contact, 'Contact', ['intro','visit','directions'], ['intro']);
+  const alumni = fields(data.alumni || {}, 'Alumni', ['intro'], []);
+  list(alumni.members || [], 'Alumni members').forEach((p,i) => { const item = fields(p, `Alumni ${i+1}`, ['name','affiliation','url'], ['name']); url(item.url, `Alumni ${i+1}: URL`); });
   list(data.projects ?? [], 'Projects').forEach((p,i) => fields(p, `Project ${i+1}`, ['title','period','funding','role','amount'], ['title','period']));
   const scan = (value, path = '') => { if (typeof value === 'string' && /[\u3400-\u9fff]/.test(value)) fail(`${path}: use English text for this English website.`); else if (Array.isArray(value)) value.forEach((v,i) => scan(v, `${path} ${i+1}`)); else if (object(value)) Object.entries(value).forEach(([k,v]) => { if (['__proto__','constructor','prototype'].includes(k)) fail(`${path}: unsupported field name.`); else scan(v, path ? `${path}: ${k}` : k); }); };
   scan(data);

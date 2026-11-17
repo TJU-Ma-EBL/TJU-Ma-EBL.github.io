@@ -65,6 +65,146 @@
   ],
   "publications": [
     {
+      "id": "loopros",
+      "year": "2026",
+      "title": "LoopROS: A Dual Recursive Self-Improvement Loops of Robotic Operating System Based on Functional Constraints and Trajectory Tuning",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Meilin Suo et al.",
+      "venue": "Preprints.org, 2026 · DOI:10.20944/preprints202611.1563.v1",
+      "area": "Robotic Self-Improvement",
+      "abstract": "A dual-loop robotic operating system that couples functionally constrained in-context learning with visual-feedback segmentwise trajectory tuning, so corrections made inside an episode are consolidated into reusable skills, parameters, and tools for later ones while foundation-model weights stay fixed. It ranks first on the RoboDojo benchmark with an 82.0% success rate and an 88.90 mean score, and completes 30 successful trials across three real bimanual manipulation tasks.",
+      "selected": true,
+      "image": "assets/images/paper/LoopROS-A-Dual-Recursive-Self-Improvement-Loops-of-Robotic-Operating-System-Based-on-Functional-Constraints-and-Trajectory-Tuning.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.20944/preprints202611.1563.v1"
+        }
+      ],
+      "note": "Preprint; not peer-reviewed. Meilin Suo, Jun Xie, and Junliang Zhang contributed equally."
+    },
+    {
+      "id": "arc-vln",
+      "year": "2026",
+      "title": "ARC-VLN: Adaptive Recursive Computing-Based Visual-Language Navigation",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Xiang Zhang et al.",
+      "venue": "Preprints.org, 2026 · DOI:10.20944/preprints202611.1560.v1",
+      "area": "Aerial Navigation",
+      "abstract": "An efficient aerial VLN framework that couples recursive parameter sharing with token-type-aware routing, keeping text and action tokens at full recursive depth while adaptively assigning exit depths to visual tokens and shortening the sequences seen by later blocks through active-token compaction. Cross-entropy regularization keeps routing from collapsing to a single exit depth, and on OpenFly the model cuts unique language-backbone parameters from 6.7B to 2.7B while reaching the lowest navigation error and the highest success rate and SPL among compared methods, with roughly half the inference time and GPU memory.",
+      "selected": true,
+      "image": "assets/images/paper/ARC-VLN-Adaptive-Recursive-Computing-Based-Visual-Language-Navigation.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.20944/preprints202611.1560.v1"
+        }
+      ],
+      "note": "Preprint; not peer-reviewed. Xiang Zhang and Xiangyu Dong contributed equally."
+    },
+    {
+      "id": "self-evolving-embodied-agents-survey",
+      "year": "2026",
+      "title": "A Survey of Self-Evolving Embodied Agents: On the Path to Real-World Physical Intelligence",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Xiangyu Dong et al.",
+      "venue": "Preprints.org, 2026 · DOI:10.20944/preprints202611.0739.v1",
+      "area": "Embodied AI Survey",
+      "abstract": "A survey that frames self-evolving embodied agents as the path toward real-world physical intelligence. It defines self-evolution as the capability to accumulate experience, detect and correct errors, and update memory, policies, skills, and models through long-term interaction, distinguishes it from test-time adaptation, online, continual, and lifelong learning, and proposes a unified closed-loop framework of perception, state representation, memory, reasoning and planning, action, feedback, reflection, and evolution. It reviews the progression from classical robotics and offline embodied learning to foundation models and self-evolving agents, summarizes key mechanisms such as experience acquisition, memory-centric learning, world-model-driven prediction, policy and skill evolution, multi-agent co-evolution, and safety-aligned updating, and discusses tasks, benchmarks, evaluation protocols, and open challenges.",
+      "selected": true,
+      "image": "assets/images/paper/A-Survey-of-Self-Evolving-Embodied-Agents-On-the-Path-to-Real-World-Physical-Intelligence.jpg",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.20944/preprints202611.0739.v1"
+        }
+      ],
+      "note": "Preprint; not peer-reviewed."
+    },
+    {
+      "id": "closer-vln-closed-loop-self-verified-retrieval-a",
+      "year": "2026",
+      "title": "CLOSER-VLN: Closed-Loop Self-Verified Retrieval-Augmented Reasoning for Aerial Vision-Language Navigation",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shaoxuan Li et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2606.28397",
+      "area": "Aerial Navigation",
+      "abstract": "A closed-loop aerial navigation framework that verifies candidate actions before execution and retrieves relevant experiences only when verification fails. It integrates hierarchical reasoning, multidimensional action verification, and targeted multimodal retrieval to reduce accumulated trajectory errors. On CityNav test-unseen, it achieves a 32.01% success rate and 21.28% success weighted by path length.",
+      "selected": true,
+      "image": "assets/images/paper/CLOSER-VLN-Closed-Loop-Self-Verified-Retrieval-Augmented-Reasoning-for-Aerial-Vision-Language-Navigation.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.28397"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "phygile-physics-prefix-guided-motion-generation",
+      "year": "2026",
+      "title": "PhyGile: Physics-Prefix Guided Motion Generation for Agile General Humanoid Motion Tracking",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Jiacheng Bao et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.19305",
+      "area": "Humanoid Motion",
+      "abstract": "A unified framework connecting text-driven robot-native motion generation with general humanoid motion tracking. Physics-guided prefixes improve physical feasibility, while a curriculum-trained mixture-of-experts controller supports robust execution. Offline and real-robot experiments demonstrate stable tracking of agile, difficult whole-body motions, reducing the mismatch between generated trajectories and physical robot capabilities.",
+      "selected": true,
+      "image": "assets/images/paper/PhyGile-Physics-Prefix-Guided-Motion-Generation-for-Agile-General-Humanoid-Motion-Tracking.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.19305"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "hierarchical-dual-change-collaborative-learning",
+      "year": "2026",
+      "title": "Hierarchical Dual-Change Collaborative Learning for UAV Scene Change Captioning",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Fuhai Chen et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.12832",
+      "area": "UAV Vision",
+      "abstract": "A hierarchical framework for describing scene changes in UAV image pairs captured from moving viewpoints. It combines adaptive spatial layout modeling with cross-modal orientation calibration to distinguish overlapping and non-overlapping regions and capture directional changes. A newly constructed UAV-SCC benchmark supports evaluation, where the method achieves state-of-the-art captioning performance.",
+      "selected": true,
+      "image": "assets/images/paper/Hierarchical-Dual-Change-Collaborative-Learning-for-UAV-Scene-Change-Captioning.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.12832"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "pm-nav-priori-map-guided-embodied-navigation-in",
+      "year": "2026",
+      "title": "PM-Nav: Priori-Map Guided Embodied Navigation in Functional Buildings",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Jiang Gao et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.09113",
+      "area": "Embodied Navigation",
+      "abstract": "A navigation framework for functional buildings that converts environmental maps into semantic prior maps. Hierarchical chain-of-thought prompting supports global route planning, while multiple models coordinate localization and action execution. Simulation and real-world evaluations on a custom building dataset show substantial improvements over SG-Nav and InstructNav in environments with visually similar spaces.",
+      "selected": true,
+      "image": "assets/images/paper/PM-Nav-Priori-Map-Guided-Embodied-Navigation-in-Functional-Buildings.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.09113"
+        }
+      ],
+      "note": ""
+    },
+    {
       "id": "visa-aerial-vln",
       "year": "2026",
       "title": "ViSA-Enhanced Aerial VLN: A Visual-Spatial Reasoning Enhanced Framework for Aerial Vision-Language Navigation",
@@ -84,6 +224,46 @@
         {
           "label": "Acceptance Information",
           "url": "https://sai.tju.edu.cn/info/1361/6321.htm"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "cmmr-vln-vision-and-language-navigation-via-cont",
+      "year": "2026",
+      "title": "CMMR-VLN: Vision-and-Language Navigation via Continual Multimodal Memory Retrieval",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Haozhou Li et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.07997",
+      "area": "Vision-Language Navigation",
+      "abstract": "A vision-and-language navigation framework that equips language-model agents with continual multimodal memory retrieval and reflection. Panoramic observations and landmarks index relevant experiences, while memory updates retain successful routes and key failure steps. Simulation and real-world tests show improved navigation success over NavGPT, MapGPT, and DiscussNav, particularly in unfamiliar and long-horizon scenarios.",
+      "selected": true,
+      "image": "assets/images/paper/CMMR-VLN-Vision-and-Language-Navigation-via-Continual-Multimodal-Memory-Retrieval.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.07997"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "mean-flow-based-one-step-vision-language-action",
+      "year": "2026",
+      "title": "Mean-Flow based One-Step Vision-Language-Action",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Yang Chen et al.",
+      "venue": "arXiv preprint, 2026 · arXiv:2603.01469",
+      "area": "Vision-Language-Action",
+      "abstract": "A one-step vision-language-action framework that replaces iterative flow-matching inference with a mean denoising vector field. Conditioned on multimodal features, it directly generates action chunks while reducing sampling latency and avoiding conventional consistency constraints. Real-world manipulation experiments report action generation 8.7 times faster than SmolVLA and 83.9 times faster than Diffusion Policy.",
+      "selected": true,
+      "image": "assets/images/paper/Mean-Flow-based-One-Step-Vision-Language-Action.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.01469"
         }
       ],
       "note": ""
@@ -111,66 +291,6 @@
         }
       ],
       "note": "The preprint was first released in 2025. This page lists it under 2026 based on the conference information on the school website."
-    },
-    {
-      "id": "mean-flow-based-one-step-vision-language-action",
-      "year": "2026",
-      "title": "Mean-Flow based One-Step Vision-Language-Action",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Yang Chen et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.01469",
-      "area": "Vision-Language-Action",
-      "abstract": "A one-step vision-language-action framework that replaces iterative flow-matching inference with a mean denoising vector field. Conditioned on multimodal features, it directly generates action chunks while reducing sampling latency and avoiding conventional consistency constraints. Real-world manipulation experiments report action generation 8.7 times faster than SmolVLA and 83.9 times faster than Diffusion Policy.",
-      "selected": true,
-      "image": "assets/images/paper/Mean-Flow-based-One-Step-Vision-Language-Action.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.01469"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "hierarchical-dual-change-collaborative-learning",
-      "year": "2026",
-      "title": "Hierarchical Dual-Change Collaborative Learning for UAV Scene Change Captioning",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Fuhai Chen et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.12832",
-      "area": "UAV Vision",
-      "abstract": "A hierarchical framework for describing scene changes in UAV image pairs captured from moving viewpoints. It combines adaptive spatial layout modeling with cross-modal orientation calibration to distinguish overlapping and non-overlapping regions and capture directional changes. A newly constructed UAV-SCC benchmark supports evaluation, where the method achieves state-of-the-art captioning performance.",
-      "selected": true,
-      "image": "assets/images/paper/Hierarchical-Dual-Change-Collaborative-Learning-for-UAV-Scene-Change-Captioning.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.12832"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "phygile-physics-prefix-guided-motion-generation",
-      "year": "2026",
-      "title": "PhyGile: Physics-Prefix Guided Motion Generation for Agile General Humanoid Motion Tracking",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Jiacheng Bao et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.19305",
-      "area": "Humanoid Motion",
-      "abstract": "A unified framework connecting text-driven robot-native motion generation with general humanoid motion tracking. Physics-guided prefixes improve physical feasibility, while a curriculum-trained mixture-of-experts controller supports robust execution. Offline and real-robot experiments demonstrate stable tracking of agile, difficult whole-body motions, reducing the mismatch between generated trajectories and physical robot capabilities.",
-      "selected": true,
-      "image": "assets/images/paper/PhyGile-Physics-Prefix-Guided-Motion-Generation-for-Agile-General-Humanoid-Motion-Tracking.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.19305"
-        }
-      ],
-      "note": ""
     },
     {
       "id": "large-scale-multimodal-model-based-embodied-inte",
@@ -223,66 +343,6 @@
         {
           "label": "DOI",
           "url": "https://doi.org/10.1109/TIE.2026.3651383"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "closer-vln-closed-loop-self-verified-retrieval-a",
-      "year": "2026",
-      "title": "CLOSER-VLN: Closed-Loop Self-Verified Retrieval-Augmented Reasoning for Aerial Vision-Language Navigation",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shaoxuan Li et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2606.28397",
-      "area": "Aerial Navigation",
-      "abstract": "A closed-loop aerial navigation framework that verifies candidate actions before execution and retrieves relevant experiences only when verification fails. It integrates hierarchical reasoning, multidimensional action verification, and targeted multimodal retrieval to reduce accumulated trajectory errors. On CityNav test-unseen, it achieves a 32.01% success rate and 21.28% success weighted by path length.",
-      "selected": true,
-      "image": "assets/images/paper/CLOSER-VLN-Closed-Loop-Self-Verified-Retrieval-Augmented-Reasoning-for-Aerial-Vision-Language-Navigation.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2606.28397"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "cmmr-vln-vision-and-language-navigation-via-cont",
-      "year": "2026",
-      "title": "CMMR-VLN: Vision-and-Language Navigation via Continual Multimodal Memory Retrieval",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Haozhou Li et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.07997",
-      "area": "Vision-Language Navigation",
-      "abstract": "A vision-and-language navigation framework that equips language-model agents with continual multimodal memory retrieval and reflection. Panoramic observations and landmarks index relevant experiences, while memory updates retain successful routes and key failure steps. Simulation and real-world tests show improved navigation success over NavGPT, MapGPT, and DiscussNav, particularly in unfamiliar and long-horizon scenarios.",
-      "selected": true,
-      "image": "assets/images/paper/CMMR-VLN-Vision-and-Language-Navigation-via-Continual-Multimodal-Memory-Retrieval.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.07997"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "pm-nav-priori-map-guided-embodied-navigation-in",
-      "year": "2026",
-      "title": "PM-Nav: Priori-Map Guided Embodied Navigation in Functional Buildings",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Jiang Gao et al.",
-      "venue": "arXiv preprint, 2026 · arXiv:2603.09113",
-      "area": "Embodied Navigation",
-      "abstract": "A navigation framework for functional buildings that converts environmental maps into semantic prior maps. Hierarchical chain-of-thought prompting supports global route planning, while multiple models coordinate localization and action execution. Simulation and real-world evaluations on a custom building dataset show substantial improvements over SG-Nav and InstructNav in environments with visually similar spaces.",
-      "selected": true,
-      "image": "assets/images/paper/PM-Nav-Priori-Map-Guided-Embodied-Navigation-in-Functional-Buildings.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2603.09113"
         }
       ],
       "note": ""
@@ -526,26 +586,6 @@
       "note": ""
     },
     {
-      "id": "transcending-adversarial-perturbations-manifold",
-      "year": "2024",
-      "title": "Transcending Adversarial Perturbations: Manifold-Aided Adversarial Examples with Legitimate Semantics",
-      "englishTitle": "",
-      "titleLang": "en",
-      "authors": "Shuai Li et al.",
-      "venue": "arXiv preprint, 2024 · arXiv:2402.03095",
-      "area": "Adversarial Robustness",
-      "abstract": "A manifold-based adversarial example framework that generates realistic semantic variations instead of adding imperceptible pixel perturbations. It learns continuous transitions from legitimate images to adversarial examples through a supervised semantic-transformation model. Experiments on handwritten digits and industrial defects demonstrate improved visual quality, attack transferability, and explanations of neural network vulnerabilities.",
-      "selected": true,
-      "image": "assets/images/paper/Transcending-Adversarial-Perturbations-Manifold-Aided-Adversarial-Examples-with-Legitimate-Semantics.jpg",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2402.03095"
-        }
-      ],
-      "note": ""
-    },
-    {
       "id": "dynamic-perturbation-adaptive-adversarial-traini",
       "year": "2024",
       "title": "Dynamic Perturbation-Adaptive Adversarial Training on Medical Image Classification",
@@ -561,6 +601,26 @@
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2403.06798"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "transcending-adversarial-perturbations-manifold",
+      "year": "2024",
+      "title": "Transcending Adversarial Perturbations: Manifold-Aided Adversarial Examples with Legitimate Semantics",
+      "englishTitle": "",
+      "titleLang": "en",
+      "authors": "Shuai Li et al.",
+      "venue": "arXiv preprint, 2024 · arXiv:2402.03095",
+      "area": "Adversarial Robustness",
+      "abstract": "A manifold-based adversarial example framework that generates realistic semantic variations instead of adding imperceptible pixel perturbations. It learns continuous transitions from legitimate images to adversarial examples through a supervised semantic-transformation model. Experiments on handwritten digits and industrial defects demonstrate improved visual quality, attack transferability, and explanations of neural network vulnerabilities.",
+      "selected": true,
+      "image": "assets/images/paper/Transcending-Adversarial-Perturbations-Manifold-Aided-Adversarial-Examples-with-Legitimate-Semantics.jpg",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.03095"
         }
       ],
       "note": ""
@@ -683,20 +743,6 @@
         "emptyMessage": "Profiles to be added.",
         "members": [
           {
-            "name": "Jiahe Zhang",
-            "englishName": "Jiahe Zhang",
-            "role": "",
-            "initials": "JZ",
-            "photo": "assets/images/people/zhangjiahe-master.png"
-          },
-          {
-            "name": "Jiang Gao",
-            "englishName": "Jiang Gao",
-            "role": "",
-            "initials": "JG",
-            "photo": "assets/images/people/gaojiang-master.jpg"
-          },
-          {
             "name": "Jun Xie",
             "englishName": "Jun Xie",
             "role": "",
@@ -712,6 +758,20 @@
                 "url": "https://b23.tv/6r42IAN"
               }
             ]
+          },
+          {
+            "name": "Jiahe Zhang",
+            "englishName": "Jiahe Zhang",
+            "role": "",
+            "initials": "JZ",
+            "photo": "assets/images/people/zhangjiahe-master.jpg"
+          },
+          {
+            "name": "Jiang Gao",
+            "englishName": "Jiang Gao",
+            "role": "",
+            "initials": "JG",
+            "photo": "assets/images/people/gaojiang-master.jpg"
           },
           {
             "name": "Lili Liu",
@@ -768,7 +828,7 @@
             "englishName": "Yuchen Zhang",
             "role": "",
             "initials": "YZ",
-            "photo": "assets/images/people/zhangyuchen-master.png"
+            "photo": "assets/images/people/zhangyuchen-master.jpg"
           },
           {
             "name": "Zhou Zhou",
@@ -777,6 +837,13 @@
             "initials": "ZZ",
             "photo": "assets/images/people/zhouzhou-master.jpg",
             "note": "Co-advised with Prof. Qinghua Hu"
+          },
+          {
+            "name": "Zirong Zhang",
+            "englishName": "Zirong Zhang",
+            "role": "",
+            "initials": "ZZ",
+            "photo": "assets/images/people/zhangzirong-master.jpg"
           }
         ]
       },
