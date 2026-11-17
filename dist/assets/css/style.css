@@ -519,8 +519,11 @@ img.avatar {
   .header-links { justify-content: flex-start; margin-top: 4px; }
   .navigation { gap: 1.25em; }
   .intro-portrait { grid-template-columns: minmax(0, 1fr); gap: 1.5em; }
+  /* Reset the explicit desktop rows too, otherwise figure and copy stack into the same cell */
   .intro-portrait .lab-figure, .intro-portrait .intro-copy { grid-column: 1; }
-  .intro-portrait .lab-figure { width: 150px; }
+  /* DOM order puts the copy first; show the portrait above the intro text on mobile */
+  .intro-portrait .lab-figure { grid-row: 1; width: 150px; }
+  .intro-portrait .intro-copy { grid-row: 2; }
   .page-home .intro h1 { font-size: 1.5em; }
   .page-home .intro-copy > .intro-lead { font-size: 1.1em; }
   .section, .page-home .section { margin-top: 1.75em; }
