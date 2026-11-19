@@ -91,8 +91,9 @@ function layout(content) {
     ${site.demo ? '<p class="demo-note"><span>Example site</span>Names, members, and publications are examples. Replace them before publishing.</p>' : ''}
   </header>
   <main id="main" tabindex="-1">${content}</main>
-<footer class="site-footer"><p>© ${year} ${escape(site.name)}</p><div class="footer-right">${safeUrl(site.sourceUrl) ? `<a href="${escape(site.sourceUrl)}" target="_blank" rel="noopener noreferrer">Faculty profile</a><span aria-hidden="true"> · </span>` : ''}<a href="./admin/">Edit website</a></div></footer>
+<footer class="site-footer"><p>© ${year} ${escape(site.name)}</p><p class="visit-stats" id="visit-stats" hidden><span id="visit-total" hidden></span><span class="visit-sep" aria-hidden="true" hidden> · </span><span id="visit-online" hidden></span></p><div class="footer-right">${safeUrl(site.sourceUrl) ? `<a href="${escape(site.sourceUrl)}" target="_blank" rel="noopener noreferrer">Faculty profile</a><span aria-hidden="true"> · </span>` : ''}<a href="./admin/">Edit website</a></div></footer>
 </div>
+<script src="./assets/js/visit-counter.js" defer></script>
 </body>
 </html>
 `;

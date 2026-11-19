@@ -493,6 +493,8 @@ img.avatar {
   animation-delay: 0.45s;
 }
 .site-footer p { margin: 0; }
+/* Quiet visitor totals between the copyright and the footer links */
+.visit-stats { opacity: 0.75; }
 .footer-right { flex-shrink: 0; }
 .footer-right a { color: var(--muted); text-decoration: none; }
 .footer-right a:hover { color: var(--gray); text-decoration: underline; }
