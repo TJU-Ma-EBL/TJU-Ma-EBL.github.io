@@ -91,7 +91,7 @@ function layout(content) {
     ${site.demo ? '<p class="demo-note"><span>Example site</span>Names, members, and publications are examples. Replace them before publishing.</p>' : ''}
   </header>
   <main id="main" tabindex="-1">${content}</main>
-<footer class="site-footer"><p>© ${year} ${escape(site.name)}</p><p class="visit-stats" id="visit-stats" hidden></p></footer>
+<footer class="site-footer"><p>© ${year} ${escape(site.name)}</p><p class="visit-stats" id="visit-stats" hidden><span id="visit-total" hidden></span><span class="visit-sep" aria-hidden="true" hidden> · </span><span id="visit-online" hidden></span></p></footer>
 </div>
 <script src="./assets/js/visit-counter.js" defer></script>
 </body>
