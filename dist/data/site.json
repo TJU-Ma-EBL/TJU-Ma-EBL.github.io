@@ -789,6 +789,13 @@
             "note": "Co-advised with Prof. Qinghua Hu"
           },
           {
+            "name": "Meilin Suo",
+            "englishName": "Meilin Suo",
+            "role": "",
+            "initials": "MS",
+            "photo": "assets/images/people/suomeilin-master.jpg"
+          },
+          {
             "name": "Runpeng Wang",
             "englishName": "Runpeng Wang",
             "role": "",
@@ -801,6 +808,13 @@
             "role": "",
             "initials": "SL",
             "photo": "assets/images/people/lishaoxuan-master.jpg"
+          },
+          {
+            "name": "Shuhan Yang",
+            "englishName": "Shuhan Yang",
+            "role": "",
+            "initials": "SY",
+            "photo": "assets/images/people/yangshuhan-master.jpg"
           },
           {
             "name": "Wenjie Sun",
@@ -858,7 +872,13 @@
             "englishName": "He Sun",
             "role": "",
             "initials": "HS",
-            "photo": "assets/images/people/sunheInterns.jpg"
+            "photo": "assets/images/people/sunheInterns.jpg",
+            "links": [
+              {
+                "label": "Homepage",
+                "url": "https://sun4-4.github.io/project-intro/"
+              }
+            ]
           },
           {
             "name": "Junliang Zhang",
