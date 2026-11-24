@@ -73,7 +73,7 @@
       "authors": "Meilin Suo et al.",
       "venue": "Preprints.org, 2026 · DOI:10.20944/preprints202611.1563.v1",
       "area": "Robotic Self-Improvement",
-      "abstract": "A dual-loop robotic operating system that couples functionally constrained in-context learning with visual-feedback segmentwise trajectory tuning, so corrections made inside an episode are consolidated into reusable skills, parameters, and tools for later ones while foundation-model weights stay fixed. It ranks first on the RoboDojo benchmark with an 82.0% success rate and an 88.90 mean score, and completes 30 successful trials across three real bimanual manipulation tasks.",
+      "abstract": "A deployable embodied recursive self-improvement (RSI) framework built on a constraints-as-policy principle, running closed-loop RSI on uncalibrated real robots instead of remaining simulation-bound: in-context-learning logical constraints parse real-world demonstrations to guide segment selection, outcome assessment, and experience reuse, while segmentwise trajectory tuning (STT) physical constraints suppress editing errors accumulated from disturbances in complex deployment. It ranks No.1 on the RoboDojo benchmark with an 80.33% success rate and an 83.88 mean score, providing one of the earliest RSI demonstrations on real robots.",
       "selected": true,
       "image": "assets/images/paper/LoopROS-A-Deployable-Embodied-Recursive-Self-Improvement-Framework-Based-on-Logical-and-Physical-Constraints.jpg",
       "links": [
